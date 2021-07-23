@@ -1,0 +1,43 @@
+@charset "UTF-8";
+html{
+  font-size: 100%;
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+/*ヘッダー*/
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:50px;
+}
+/*メニューボタン*/
+.main-nav{
+  display: flex;
+  font-size: 1.25rem;
+  margin-top: 34px;
+  list-style: none;
+}
+.main-nav li{
+  margin-left: 36px;
+}
+/*全体*/
+.main{
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+/*メインコンテンツ*/
+.contents{
+  display: flex;
+  justify-content: space-around
+}
+/* 単勝 */
+.single{
+  width: 50%;
+  text-align: center;
+}
+/* 三連単 */
+.triple{
+  width: 50%;
+  text-align: center;
+}
+
