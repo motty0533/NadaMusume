@@ -4,10 +4,22 @@ html{
   font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
 /*ヘッダー*/
+header{
+  height: 7em;
+  border-bottom: solid 1px #000000;
+}
 .page-header{
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
   margin-bottom:50px;
+  font-family: 'Shippori Mincho', serif;
+}
+.logo{
+  width: 6em;
+  margin-top: -2em;
+  margin-bottom: -4em;
+}
+.page-title{
+  font-size: 1em;
 }
 /*メニューボタン*/
 .main-nav{
@@ -28,30 +40,36 @@ html{
 /*メインコンテンツ*/
 .contents{
   display: flex;
+  flex-flow: column;
   justify-content: space-around;
+  margin-top: -2em;
 }
 /* 単勝 */
 .single{
-  width: 50%;
+  width: 100%;
   text-align: center;
   align-items: center;
   display: flex;
   flex-direction: column;
+  border-bottom: solid 1px #000000;
+  padding-bottom: 3em;
+  padding-top: auto;
+  margin-bottom: 1em;
 }
 .box{
   padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
     border: solid 3px #000000;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 100px;
+    width: 50px;
+    height: 50px;
+    margin-bottom:50px;
 }
 .horse {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 .candidate{
   display: flex;
@@ -59,11 +77,160 @@ html{
 }
 /* 三連単 */
 .triple{
-  width: 50%;
+  width: 100%;
   text-align: center;
+  padding-top: auto;
+  align-items:center;
+  display: flex;
+  flex-direction: column;
 }
 
 .boxes{
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  width: 100%;
+}
+h2{
+  font-weight: 500;
+}
+/* 投票ボタン */
+.button1{
+  background-color:blue;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  font-size: 1.625em;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #fff;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+  position: fixed;
+  right:20px;
+  bottom:20px;
+  transition:1s;
+  opacity:0.7;
+}
+.button1 span{
+  font-size: 1.5rem;
+  padding-top: 6px;
+  display: block;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* ポイントの入力フォーム */
+.cp_iptxt {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+  text-align: left;
+}
+.cp_iptxt input[type='number'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	letter-spacing: 1px;
+	padding-left: 4em;
+}
+.cp_iptxt input[type='number']:focus {
+	outline: none;
+}
+.ef {
+	padding: 7px 14px;
+	transition: 0.4s;
+	border: 1px solid #1b2538;
+	background: transparent;
+}
+.ef ~ .focus_line:before,
+.ef ~ .focus_line:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	content: '';
+	transition: 0.2s;
+	transition-delay: 0.2s;
+	background-color: #da3c41;
+}
+.ef ~ .focus_line:after {
+	top: auto;
+	right: auto;
+	bottom: 0;
+	left: 0;
+	transition-delay: 0.6s;
+}
+.ef ~ .focus_line i:before,
+.ef ~ .focus_line i:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:2px;
+	height: 0;
+	content: '';
+	transition: 0.2s;
+	background-color: #da3c41;
+}
+.ef ~ .focus_line i:after {
+	top: auto;
+	right: 0;
+	bottom: 0;
+	left: auto;
+	transition-delay: 0.4s;
+}
+.ef:focus ~ .focus_line:before,
+.ef:focus ~ .focus_line:after,
+.cp_iptxt.ef ~ .focus_line:before,
+.cp_iptxt.ef ~ .focus_line:after {
+	width: 100%;
+	transition: 0.2s;
+	transition-delay: 0.6s;
+}
+.ef:focus ~ .focus_line:after,
+.cp_iptxt.ef ~ .focus_line:after {
+	transition-delay: 0.2s;
+}
+.ef:focus ~ .focus_line i:before,
+.ef:focus ~ .focus_line i:after,
+.cp_iptxt.ef ~ .focus_line i:before,
+.cp_iptxt.ef ~ .focus_line i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+.ef:focus ~ .focus_line i:after,
+.cp_iptxt.ef ~ .focus_line i:after {
+	transition-delay: 0.4s;
+}
+.ef ~ label {
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	left: 14px;
+	width: 100%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color: #aaaaaa;
+}
+.ef:focus ~ label, .cp_iptxt.ef ~ label {
+	font-size: px;
+	top: -18px;
+	left: 0;
+	transition: 0.3s;
+	color: #da3c41;
+}
+input::-ms-clear {
+  visibility:hidden
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+}
+
+input[type="number"] {
+     -moz-appearance:textfield;
+}
+input{
+  text-align: center;
 }

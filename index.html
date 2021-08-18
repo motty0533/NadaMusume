@@ -7,18 +7,17 @@
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
   <title>ナダ娘投票フォーム</title>
 </head>
 <body>
   <div class="main">
   <header class="page-header">
-    <h1 class="page-title">ナダ娘投票フォーム</h1>
-    <nav>
-      <ul class="main-nav">
-        <li><a href="#">ルール説明</a></li>
-        <li><a href="#">選手紹介</a></li>
-      </ul>
-    </nav>
+    <h1 class="page-title">灘校体育祭</h1>
+    <img class="logo" src="img/logo.png" alt="logo">
   </header>
   <div class="contents">
     <section class="single">
@@ -31,6 +30,11 @@
         <img src="img/horse3.jpg" alt="候補者その３" class="horse">
         <img src="img/horse4.jpg" alt="候補者その４" class="horse">
       </div>
+      <div class="cp_iptxt">
+        <input class="ef" type="number" form="form1" min="1" max="100" placeholder="">
+        <label>ポイントを入力</label>
+        <span class="focus_line"><i></i></span>
+        </div>
     </section>
     <section class="triple">
       <h2>三連単</h2>
@@ -45,8 +49,15 @@
         <img src="img/horse3.jpg" alt="候補者その３" class="horse">
         <img src="img/horse4.jpg" alt="候補者その４" class="horse">
       </div>
+      <div class="cp_iptxt">
+        <input class="ef" type="number" form="form1" min="1" max="100" placeholder="">
+        <label>ポイントを入力</label>
+        <span class="focus_line"><i></i></span>
+        </div>
     </section>
-</div>
-</div>
+    <form id="form1" action="#">
+      <button class="button1" type="submit">投票<span>残りNpt</span></button>
+    </form>
+
 </body>
 </html>
