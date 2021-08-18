@@ -50,6 +50,7 @@ html{
   border: 1px solid #ccc;
   white-space: nowrap;
   overflow-x: scroll;
+  overflow-y: visible;
 }
 .candidates-container{
   display: inline-flex;
