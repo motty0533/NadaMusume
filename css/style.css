@@ -10,8 +10,8 @@ body{
   background-position-x: -1100px;
   background-position-y: -700px;
   z-index: 30;
+  margin: 0;
 }
-
 /*ヘッダー*/
 header{
   height: 7em;
@@ -30,16 +30,6 @@ header{
 }
 .page-title{
   font-size: 1em;
-}
-/*メニューボタン*/
-.main-nav{
-  display: flex;
-  font-size: 1.25rem;
-  margin-top: 34px;
-  list-style: none;
-}
-.main-nav li{
-  margin-left: 36px;
 }
 /*全体*/
 .main{
@@ -88,6 +78,8 @@ header{
     text-align: center;
     font-family: 'Shippori Mincho',serif;
     font-weight: 600;
+    background-color: #fff;
+    color: black;
 }
 .horse {
   width: 50px;
@@ -258,4 +250,18 @@ input[type="number"] {
 input{
   text-align: center;
   color: #fff;
+}
+
+@media(min-width:1000px){
+  .contents{
+    flex-direction: row;
+  }
+  .single{
+    width: 50%;
+    border: none;
+    border-right: solid 1px #fff;
+  }
+  .triple{
+    width: 50%;
+  }
 }
