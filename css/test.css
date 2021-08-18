@@ -37,35 +37,36 @@ html{
     justify-content: center;
 }
 .betting .box{
-    padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
     border: solid 3px #000000;
-    width: 100px;
-    height: 100px;
+    width: 103px;
+    height: 103px;
     margin-bottom: 100px;
 }
-
-.scroll-box{
-  border: 1px solid #ccc;
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: visible;
-}
-.candidates-container{
-  display: inline-flex;
-}
-.candidate{
+.betting .dropped{
+    margin: 2em 0;
     font-weight: bold;
     border: solid 3px #000000;
+    width: 103px;
+    height: 103px;
+    margin-bottom: 100px;
+    background-image: ;
+}
+#candidates-container1{
+  display: flex;
+}
+.candidate1{
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     margin: 10px 10px 10px 10px;
+    width: 100px;
+    height: 100px;
 }
 .horse{
-  width: 100px;
-  height: 100px;
+  width:100%;
   object-fit: cover;
 }

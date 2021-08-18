@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-  <link rel="stylesheet" href="css/test.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <title>ナダ娘投票フォーム</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>ナダ娘投票フォーム</title>
 </head>
+
 <body class="form">
     <header class="page-header">
         <div class="header-container">
-        <h1 class="page-title">ナダ娘投票フォーム</h1>
-        <nav>
-            <ul class="main-nav">
-                <li><a href="#">ルール説明</a></li>
-                <li><a href="#">選手紹介</a></li>
-            </ul>
-        </nav>
+            <h1 class="page-title">ナダ娘投票フォーム</h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#">ルール説明</a></li>
+                    <li><a href="#">選手紹介</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <div class="page-main">
@@ -26,60 +28,62 @@
             <section class="single">
                 <h1>単勝</h1>
                 <div class="betting">
-                    <div class="box"></div>
+                    <div class="box drop-area"></div>
                 </div>
-                <div class="scroll-box">
-                    <div class="candidates-container">
-                        <div class="candidate first">
-                            <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
-                        </div>
-                        <div class="candidate second">
-                            <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
-                        </div>
-                        <div class="candidate third">
-                            <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
-                        </div>
-                        <div class="candidate fourth">
-                            <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
-                        </div>
-                        <div class="candidate fifth">
-                            <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
-                        </div>
-                        <div class="candidate sixth">
-                            <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
-                        </div>
-                        <div class="candidate seventh">
-                            <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
-                        </div>
-                        <div class="candidate eighth">
-                            <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
-                        </div>
+                <div id="candidates-container1">
+                    <div class="candidate1 first">
+                        <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
+                    </div>
+                    <div class="candidate1 second">
+                        <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
+                    </div>
+                    <div class="candidate1 third">
+                        <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
+                    </div>
+                    <div class="candidate1 fourth">
+                        <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
+                    </div>
+                    <div class="candidate1 fifth">
+                        <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
+                    </div>
+                    <div class="candidate1 sixth">
+                        <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
+                    </div>
+                    <div class="candidate1 seventh">
+                        <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
+                    </div>
+                    <div class="candidate1 eighth">
+                        <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
                     </div>
                 </div>
             </section>
         </div>
     </div>
 </body>
+
 </html>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="https://rawgithub.com/briangonzalez/jquery.pep.js/master/src/jquery.pep.js"></script>
+<script type="text/javascript"
+    src="https://rawgithub.com/briangonzalez/jquery.pep.js/master/src/jquery.pep.js"></script>
 <script>
     jQuery(function ($) {
-        $('.candidate').children().on('MSPointerDown touchstart mousedown', function (e) {
-            $(this).closest('.candidate').pep({
-                shouldEase: false,
-                place: false,
-                droppable: '.box .candidates-container',        // dropを許可する要素
-                revert: true,
-                start: function (ev, obj) {
-                    // drop始め
-                },
-                drag: function (ev, obj) {
-                    // dragできる場所強調表示
-                },
-                stop: function (ev, obj) {
-                    // dragしたあとの処理
+        $('.candidate1').children().on('MSPointerDown touchstart mousedown', function (e) {
+            $(this).closest('.candidate1').pep({
+                    shouldEase: false,
+                    place: false,
+                    droppable: '.drop-area',        // dropを許可する要素
+                    revert: true,
+                    start: function (ev, obj) {
+
+                    },
+                    drag: function (ev, obj) {
+
+                    },
+                    stop: function (ev, obj) {
+                        obj.activeDropRegions[0].removeClass(".drop-area");
+                        obj.$el.addClass(".voted");
+                        obj.activeDropRegions[0].addClass(".dropped");
                 }
             });
         });

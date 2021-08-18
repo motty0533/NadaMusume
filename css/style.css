@@ -91,6 +91,7 @@ header{
   display: flex;
   justify-content: space-between;
 }
+
 /* 三連単 */
 .triple{
   width: 100%;
