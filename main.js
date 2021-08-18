@@ -2,7 +2,7 @@
 $(function(){
   
   var single_point = 0;
-  var triple_point = $('.tripleform').val();
+  var triple_point = 0;
   var remaining_point = 100;
   $('.singleform').on('input',function(){
     single_point = $('.singleform').val();
@@ -20,4 +20,15 @@ $(function(){
     }
     $('.button1 span').text("残り"+remaining_point+"pt");
   })
+  $('#form1').submit(function(){
+    single_point = $('.singleform').val();
+    triple_point = $('.tripleform').val();
+    if(Number(single_point)+Number(triple_point)>100){
+      alert('合計で100pt以下になるようにしてください！');
+      return false;
+    }
+    if(Number(single_point)+Number(triple_point)==0){
+      alert('ポイントを入力してください！')
+    }
+  });
 });
