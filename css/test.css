@@ -36,10 +36,7 @@ html{
     display: flex;
     justify-content: center;
 }
-.betting li{
-    
-}
-.box{
+.betting .box{
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
@@ -47,4 +44,27 @@ html{
     width: 100px;
     height: 100px;
     margin-bottom: 100px;
+}
+
+.scroll-box{
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+.candidates-container{
+  display: inline-flex;
+}
+.candidate{
+    font-weight: bold;
+    border: solid 3px #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 10px 0 10px;
+}
+.horse{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
