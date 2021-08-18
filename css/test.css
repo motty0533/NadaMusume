@@ -61,7 +61,7 @@ html{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin: 0 10px 0 10px;
+    margin: 10px 10px 10px 10px;
 }
 .horse{
   width: 100px;
