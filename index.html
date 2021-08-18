@@ -90,17 +90,85 @@
         stop: function (ev, obj) {
           if(obj.activeDropRegions.length>0){
             obj.$el.css("display","none");
+            $("#sin-first").css("display", "none");
             if (obj.$el.hasClass("first1")) {
               obj.activeDropRegions[0].css({
                 "background-image" : "url(img/horse1.jpg)",
                 "background-size" : "50px auto",
                 "background-position" : "top left"
               });
-              obj.activeDropRegions[0].addClass("first1");
-              if(obj.activeDropRegions[0].hasClass("second1")){
-                obj.activeDropRegions[0].removeClass("second1");
-                $("second1").css("display","block");
-                sin
+              obj.activeDropRegions[0].addClass("1");
+              if(obj.activeDropRegions[0].hasClass("2")){
+                obj.activeDropRegions[0].removeClass("2");
+                $(".second1").css("display","block");
+              }
+              if (obj.activeDropRegions[0].hasClass("3")) {
+                obj.activeDropRegions[0].removeClass("3");
+                $(".third1").css("display", "block");
+              }
+              if (obj.activeDropRegions[0].hasClass("4")) {
+                obj.activeDropRegions[0].removeClass("4");
+                $(".fourth1").css("display", "block");
+              }
+            }
+            if (obj.$el.hasClass("second1")) {
+              obj.activeDropRegions[0].css({
+                "background-image": "url(img/horse2.jpg)",
+                "background-size": "50px auto",
+                "background-position": "top left"
+              });
+              obj.activeDropRegions[0].addClass("2");
+              if (obj.activeDropRegions[0].hasClass("1")) {
+                obj.activeDropRegions[0].removeClass("1");
+                $(".first1").css("display", "block");
+              }
+              if (obj.activeDropRegions[0].hasClass("3")) {
+                obj.activeDropRegions[0].removeClass("3");
+                $(".third1").css("display", "block");
+              }
+              if (obj.activeDropRegions[0].hasClass("4")) {
+                obj.activeDropRegions[0].removeClass("4");
+                $(".fourth1").css("display", "block");
+              }
+            }
+            if (obj.$el.hasClass("third1")) {
+              obj.activeDropRegions[0].css({
+                "background-image": "url(img/horse3.jpg)",
+                "background-size": "50px auto",
+                "background-position": "top left"
+              });
+              obj.activeDropRegions[0].addClass("3");
+              if (obj.activeDropRegions[0].hasClass("2")) {
+                obj.activeDropRegions[0].removeClass("2");
+                $(".second1").css("display", "block");
+              }
+              if (obj.activeDropRegions[0].hasClass("1")) {
+                obj.activeDropRegions[0].removeClass("1");
+                $(".first1").css("display", "block");
+              }
+              if (obj.activeDropRegions[0].hasClass("4")) {
+                obj.activeDropRegions[0].removeClass("4");
+                $(".fourth1").css("display", "block");
+              }
+            }
+            if (obj.$el.hasClass("fourth1")) {
+              obj.activeDropRegions[0].css({
+                "background-image": "url(img/horse4.jpg)",
+                "background-size": "50px auto",
+                "background-position": "top left"
+              });
+              obj.activeDropRegions[0].addClass("4");
+              if (obj.activeDropRegions[0].hasClass("2")) {
+                obj.activeDropRegions[0].removeClass("2");
+                $(".second1").css("display", "block");
+              }
+              if (obj.activeDropRegions[0].hasClass("3")) {
+                obj.activeDropRegions[0].removeClass("3");
+                $(".third1").css("display", "block");
+              }
+              if (obj.activeDropRegions[0].hasClass("1")) {
+                obj.activeDropRegions[0].removeClass("1");
+                $(".first1").css("display", "block");
               }
             }
           }
