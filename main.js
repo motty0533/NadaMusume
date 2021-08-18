@@ -1,3 +1,4 @@
+// 残りポイント表示
 $(function(){
   
   var single_point = 0;
