@@ -30,13 +30,13 @@
     <section class="single">
       <h2 class="midashi">単勝</h2>
       <div class="box box-sin">
-        一位
+        <span id="sin-first">一位</span>
       </div>
       <div class="candidate">
-        <img src="img/horse1.jpg" alt="候補者その１" class="horse horse-sin first">
-        <img src="img/horse2.jpg" alt="候補者その２" class="horse horse-sin second">
-        <img src="img/horse3.jpg" alt="候補者その３" class="horse horse-sin third">
-        <img src="img/horse4.jpg" alt="候補者その４" class="horse horse-sin fourth">
+        <div  class="horse horse-sin first1"><img src="img/horse1.jpg" alt="候補者その１"></div>
+        <div class="horse horse-sin second1"><img src="img/horse2.jpg" alt="候補者その２"></div>
+        <div class="horse horse-sin third1"><img src="img/horse3.jpg" alt="候補者その３"></div>
+        <div class="horse horse-sin fourth1"><img src="img/horse4.jpg" alt="候補者その４"></div>
       </div>
       <div class="cp_iptxt">
         <input class="ef" type="number" form="form1" min="1" max="100" placeholder="">
@@ -52,10 +52,10 @@
         <div class="box box-tri">三位</div>
       </div>
       <div class="candidate">
-        <img src="img/horse1.jpg" alt="候補者その１" class="horse horse-tri first">
-        <img src="img/horse2.jpg" alt="候補者その２" class="horse horse-tri second">
-        <img src="img/horse3.jpg" alt="候補者その３" class="horse horse-tri third">
-        <img src="img/horse4.jpg" alt="候補者その４" class="horse horse-tri fourth">
+        <img src="img/horse1.jpg" alt="候補者その１" class="horse horse-tri first2">
+        <img src="img/horse2.jpg" alt="候補者その２" class="horse horse-tri second2">
+        <img src="img/horse3.jpg" alt="候補者その３" class="horse horse-tri third2">
+        <img src="img/horse4.jpg" alt="候補者その４" class="horse horse-tri fourth2">
       </div>
       <div class="cp_iptxt">
         <input class="ef" type="number" form="form1" min="1" max="100" placeholder="">
@@ -85,18 +85,23 @@
         },
         drag: function (ev, obj) {
           console.log(obj.activeDropRegions);
-          console.log(obj.$el.hasClass("first"))
+          console.log(obj.$el.hasClass("first1"))
         },
         stop: function (ev, obj) {
           if(obj.activeDropRegions.length>0){
             obj.$el.css("display","none");
-            if (obj.$el.hasClass("first")) {
+            if (obj.$el.hasClass("first1")) {
               obj.activeDropRegions[0].css({
                 "background-image" : "url(img/horse1.jpg)",
                 "background-size" : "50px auto",
                 "background-position" : "top left"
               });
-              obj.activeDropRegions[0].addClass("first");
+              obj.activeDropRegions[0].addClass("first1");
+              if(obj.activeDropRegions[0].hasClass("second1")){
+                obj.activeDropRegions[0].removeClass("second1");
+                $("second1").css("display","block");
+                sin
+              }
             }
           }
         }
