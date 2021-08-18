@@ -31,7 +31,7 @@
         <img src="img/horse4.jpg" alt="候補者その４" class="horse">
       </div>
       <div class="cp_iptxt">
-        <input class="ef" type="number" placeholder="">
+        <input class="ef" type="number" form="form1" min="1" max="100" placeholder="">
         <label>ポイントを入力</label>
         <span class="focus_line"><i></i></span>
         </div>
@@ -50,12 +50,14 @@
         <img src="img/horse4.jpg" alt="候補者その４" class="horse">
       </div>
       <div class="cp_iptxt">
-        <input class="ef" type="number" placeholder="">
+        <input class="ef" type="number" form="form1" min="1" max="100" placeholder="">
         <label>ポイントを入力</label>
         <span class="focus_line"><i></i></span>
         </div>
     </section>
-    <h2 class="button">投票<span>残りNpt</span></h2>
+    <form id="form1" action="#">
+      <button class="button1" type="submit">投票<span>残りNpt</span></button>
+    </form>
 
 </body>
 </html>
