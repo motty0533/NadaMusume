@@ -4,10 +4,22 @@ html{
   font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
 /*ヘッダー*/
+header{
+  height: 7em;
+  border-bottom: solid 1px #000000;
+}
 .page-header{
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
   margin-bottom:50px;
+  font-family: 'Shippori Mincho', serif;
+}
+.logo{
+  width: 6em;
+  margin-top: -2em;
+  margin-bottom: -4em;
+}
+.page-title{
+  font-size: 1em;
 }
 /*メニューボタン*/
 .main-nav{
@@ -28,30 +40,36 @@ html{
 /*メインコンテンツ*/
 .contents{
   display: flex;
+  flex-flow: column;
   justify-content: space-around;
+  margin-top: -2em;
 }
 /* 単勝 */
 .single{
-  width: 50%;
+  width: 100%;
   text-align: center;
   align-items: center;
   display: flex;
   flex-direction: column;
+  border-bottom: solid 1px #000000;
+  padding-bottom: 3em;
+  padding-top: auto;
+  margin-bottom: 1em;
 }
 .box{
   padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
     border: solid 3px #000000;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 100px;
+    width: 50px;
+    height: 50px;
+    margin-bottom:50px;
 }
 .horse {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 .candidate{
   display: flex;
@@ -59,11 +77,40 @@ html{
 }
 /* 三連単 */
 .triple{
-  width: 50%;
+  width: 100%;
   text-align: center;
+  padding-top: auto;
 }
 
 .boxes{
   display: flex;
   justify-content: space-around;
+}
+h2{
+  font-weight: 500;
+}
+/* 投票ボタン */
+.button{
+  background-color:blue;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  font-size: 1.625em;
+  text-align: center;
+  padding-top:1.2em;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #fff;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+  position: fixed;
+  right:20px;
+  bottom:20px;
+  transition:1s;
+  opacity:0.7;
+}
+.button span{
+  font-size: 1.5rem;
+  padding-top: 6px;
+  display: block;
+  width: auto;
+  margin: 0 auto;
 }
