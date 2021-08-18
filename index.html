@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="/vendor/jquery-1.10.2.min.js"></script>
+  <script src="/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="/main.js"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -39,7 +42,7 @@
         <div class="horse horse-sin fourth1"><img src="img/horse4.jpg" alt="候補者その４" draggable="false"></div>
       </div>
       <div class="cp_iptxt">
-        <input class="ef" type="number" form="form1" min="1" max="100" placeholder="">
+        <input class="ef singleform" type="number" form="form1" min="1" max="100" placeholder="">
         <label>ポイントを入力</label>
         <span class="focus_line"><i></i></span>
         </div>
@@ -58,13 +61,13 @@
         <img src="img/horse4.jpg" alt="候補者その４" class="horse horse-tri fourth2">
       </div>
       <div class="cp_iptxt">
-        <input class="ef" type="number" form="form1" min="1" max="100" placeholder="">
+        <input class="ef tripleform" type="number" form="form1" min="1" max="100" placeholder="">
         <label>ポイントを入力</label>
         <span class="focus_line"><i></i></span>
         </div>
     </section>
     <form id="form1" action="#">
-      <button class="button1" type="submit">投票<span>残りNpt</span></button>
+      <button class="button1" type="submit">投票<span>残り100pt</span></button>
     </form>
   </div>
 </div>
