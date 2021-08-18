@@ -30,28 +30,28 @@
                 </div>
                 <div class="scroll-box">
                     <div class="candidates-container">
-                        <div class="candidate">
+                        <div class="candidate first">
                             <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
                         </div>
-                        <div class="candidate">
+                        <div class="candidate second">
                             <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
                         </div>
-                        <div class="candidate">
+                        <div class="candidate third">
                             <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
                         </div>
-                        <div class="candidate">
+                        <div class="candidate fourth">
                             <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
                         </div>
-                        <div class="candidate">
+                        <div class="candidate fifth">
                             <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
                         </div>
-                        <div class="candidate">
+                        <div class="candidate sixth">
                             <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
                         </div>
-                        <div class="candidate">
+                        <div class="candidate seventh">
                             <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
                         </div>
-                        <div class="candidate">
+                        <div class="candidate eighth">
                             <img src="img/horse1.jpg" alt="候補者その１" class="horse" draggable="false">
                         </div>
                     </div>
@@ -67,7 +67,21 @@
 <script>
     jQuery(function ($) {
         $('.candidate').children().on('MSPointerDown touchstart mousedown', function (e) {
-            $(this).closest('.candidate').pep();
+            $(this).closest('.candidate').pep({
+                shouldEase: false,
+                place: false,
+                droppable: '.box .candidates-container',        // dropを許可する要素
+                revert: true,
+                start: function (ev, obj) {
+                    // drop始め
+                },
+                drag: function (ev, obj) {
+                    // dragできる場所強調表示
+                },
+                stop: function (ev, obj) {
+                    // dragしたあとの処理
+                }
+            });
         });
     });
 </script>
