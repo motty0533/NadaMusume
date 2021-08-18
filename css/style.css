@@ -69,20 +69,25 @@ header{
   margin-bottom: 1em;
 }
 .box{
-  padding: 0.2em 1em;
-    margin: 2em 0;
-    border: inset 1px #fff;
-    width: 50px;
-    height: 50px;
-    margin-bottom:50px;
-    text-align: center;
-    font-family: 'Shippori Mincho',serif;
-    font-weight: 600;
-    background-color: #fff;
-    color: black;
+  position:relative;
+  margin: 2em 0;
+  border: inset 1px #fff;
+  width: 50px;
+  height: 50px;
+  margin-bottom:50px;
+  text-align: center;
+  font-family: 'Shippori Mincho',serif;
+  font-weight: 600;
+  background-color: #fff;
+  color: black;
 }
-.box-sin{
+.box div{
+  padding: 0.2em 1em;
   margin:0px;
+  position: absolute;
+  top: 0%;left: 0%;
+  width: 50px;
+  height: 50px;
 }
 .horse {
   width: 50px;
