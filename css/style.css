@@ -5,12 +5,53 @@ html{
   color: #fff;
 }
 body{
-  background-image: url(../img/sky.jpg);
+  background-image: url("../img/sky.jpg");
   background-size: auto;
   background-position-x: -1100px;
   background-position-y: -700px;
   z-index: 30;
   margin: 0;
+}
+/* 切り替えタブ */
+.section-header{
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 30px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+.section-header .tabs-nav{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+.section-header .tabs-nav li {
+  float: left;
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+.section-header .tabs-nav a{
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+.section-header .tabs-nav a:hover,.section-header .tabs-nav a:active{
+  color:rgba(0, 0, 0, 0.753);
+  background-color: #fff;
+}
+.section-header .tabs-nav a:active::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 37px;
+  height: 19px;
+  margin-left: -18px;
 }
 /*ヘッダー*/
 header{
@@ -20,7 +61,7 @@ header{
 }
 .page-header{
   text-align: center;
-  margin-bottom:50px;
+  margin-bottom:0px;
   font-family: 'Shippori Mincho', serif;
 }
 .logo{
@@ -36,6 +77,8 @@ header{
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 4%;
+  display: flex;
+  flex-direction: column;
 }
 /*メインコンテンツ*/
 .contents{
