@@ -19,6 +19,13 @@ body{
   font-size: 30px;
   padding-top: 0px;
   padding-bottom: 20px;
+  font-family: 'Kosugi Maru',serif;
+}
+.vote1{
+  border-radius: 0.5em 0 0 0.5em;
+}
+.intro2{
+  border-radius: 0 0.5em 0.5em 0;
 }
 .section-header .tabs-nav{
   display: flex;
@@ -171,7 +178,7 @@ header{
 .boxes{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
 }
 h2{
@@ -185,7 +192,7 @@ h2{
   height: 5em;
   font-size: 1.625em;
   text-align: center;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Kosugi Maru', sans-serif;
   color: #000;
   box-shadow: 0 3px 5px rgba(0,0,0,0.3);
   position: fixed;
@@ -209,6 +216,7 @@ h2{
 	width: 80%;
 	margin: 40px 3%;
   text-align: left;
+  font-family: 'Kosugi Maru';
 }
 .cp_iptxt input[type='number'] {
 	font: 15px/24px sans-serif;
