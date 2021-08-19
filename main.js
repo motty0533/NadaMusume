@@ -88,44 +88,8 @@ jQuery(function ($) {
         var target = obj.activeDropRegions[0].children(".box-sin");
         if (!target.hasClass("dropped-sin")) {
           target.addClass("dropped-sin");
-          $(target).pep({
-            shouldEase: false,
-            place: false,
-            droppable: '.box',        // dropを許可する要素
-            revert: true,
-            start: function (event, object) {
-              $('#sin-first').css("display", "inline");
-            },
-            drag: function (event, object) {
-              object.$el.css("z-index", "30");
-            },
-            stop: function (event, object) {
-              object.$el.css("z-index", "auto");
-              if (object.activeDropRegions.length == 0) {
-                object.$el.removeClass("dropped-sin");
-                object.$el.css({
-                  "background-color": "transparent",
-                  "background-image": "url()",
-                });
-                if (object.$el.hasClass("1")) {
-                  $(".first1").css("display", "block");
-                }
-                if (object.$el.hasClass("2")) {
-                  $(".second1").css("display", "block");
-                }
-                if (object.$el.hasClass("3")) {
-                  $(".third1").css("display", "block");
-                }
-                if (object.$el.hasClass("4")) {
-                  $(".fourth1").css("display", "block");
-                }
-              }
-              else{
-                $('#sin-first').css("display", "none");
-              }
-            }
-          });
         }
+        target.css("display","block");
         $("#sin-first").css("display", "none");
         if (obj.$el.hasClass("first1")) {
           target.css({
@@ -207,13 +171,56 @@ jQuery(function ($) {
             $(".first1").css("display", "block");
           }
         }
+        $(target).pep({
+          shouldEase: false,
+          place: false,
+          droppable: $(this).closest('.vote-sin'),        // dropを許可する要素
+          revert: true,
+          start: function (event, object) {
+
+          },
+          drag: function (event, object) {
+            object.$el.css("z-index", "30");
+            $('#sin-first').css("display", "block");
+          },
+          stop: function (event, object) {
+            object.$el.css("z-index", "auto");
+            if (object.activeDropRegions.length == 0) {
+              object.$el.removeClass("dropped-sin");
+              object.$el.css("display", "none");
+              object.$el.css({
+                "background-color": "transparent",
+                "background-image": "url()",
+              });
+              if (object.$el.hasClass("1")) {
+                $(".first1").css("display", "block");
+                object.$el.removeClass("1");
+              }
+              if (object.$el.hasClass("2")) {
+                $(".second1").css("display", "block");
+                object.$el.removeClass("2");
+              }
+              if (object.$el.hasClass("3")) {
+                $(".third1").css("display", "block");
+                object.$el.removeClass("3");
+              }
+              if (object.$el.hasClass("4")) {
+                $(".fourth1").css("display", "block");
+                object.$el.removeClass("4");
+              }
+            }
+            else {
+              $('#sin-first').css("display", "none");
+            }
+          }
+        });
       }
     }
   });
   $('.horse-tri').pep({
     shouldEase: false,
     place: false,
-    droppable: '.box-tri',        // dropを許可する要素
+    droppable: '.vote-tri',        // dropを許可する要素
     revert: true,
     start: function (ev, obj) {
 
@@ -222,6 +229,7 @@ jQuery(function ($) {
 
     },
     stop: function (ev, obj) {
+      
     }
   });
   /*$('.horse-sin').on('MSPointerDown touchstart mousedown', function (e) {
