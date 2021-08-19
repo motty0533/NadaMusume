@@ -79,9 +79,10 @@ jQuery(function ($) {
 
     },
     drag: function (ev, obj) {
-      
+      obj.$el.css("z-index", "30");
     },
     stop: function (ev, obj) {
+      obj.$el.css("z-index", "auto");
       if (obj.activeDropRegions.length > 0) {
         obj.$el.css("display", "none");
         var target = obj.activeDropRegions[0].children(".box-sin");
@@ -179,11 +180,9 @@ jQuery(function ($) {
 
           },
           drag: function (event, object) {
-            object.$el.css("z-index", "30");
             $('#sin-first').css("display", "block");
           },
           stop: function (event, object) {
-            object.$el.css("z-index", "auto");
             if (object.activeDropRegions.length == 0) {
               object.$el.removeClass("dropped-sin");
               object.$el.css("display", "none");
