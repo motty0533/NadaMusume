@@ -70,6 +70,7 @@ $(function(){
 });
 // ドラッグアンドドロップ
 jQuery(function ($) {
+  var num=4;
   $('.horse-sin').pep({
     shouldEase: false,
     place: false,
@@ -342,21 +343,12 @@ jQuery(function ($) {
           "background-image": "url()",
         });
         object.$el.addClass("-1");
-        if (object.$el.hasClass("1")) {
-          $(".2-1").css("display", "block");
-          object.$el.removeClass("1");
-        }
-        if (object.$el.hasClass("2")) {
-          $(".2-2").css("display", "block");
-          object.$el.removeClass("2");
-        }
-        if (object.$el.hasClass("3")) {
-          $(".2-3").css("display", "block");
-          object.$el.removeClass("3");
-        }
-        if (object.$el.hasClass("4")) {
-          $(".2-4").css("display", "block");
-          object.$el.removeClass("4");
+        for(let i=1;i<=num;i++){
+          let j=String(i);
+          if (object.$el.hasClass(j)) {
+            $(".2-"+j).css("display", "block");
+            object.$el.removeClass(j);
+          }
         }
       }
       else {
@@ -371,7 +363,7 @@ jQuery(function ($) {
             "background-image": "url()",
           });
         }
-        for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i <= num; i++) {
           let j = String(i);
           if (target_tri.hasClass(j)) {
             tmp = j;
@@ -393,7 +385,7 @@ jQuery(function ($) {
             "background-image": "url()",
           });
         }
-        for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i <= num; i++) {
           let j = String(i);
           if (object.$el.hasClass(j)) {
             target_tri.addClass(j);
