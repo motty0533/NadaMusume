@@ -125,7 +125,7 @@ header{
   background-color: #fff;
   color: black;
 }
-#sin-first,#tri-first,#tri-second,#tri-third{
+.vote-box{
   padding: 0.2em 1em;
   margin:0px;
   position: absolute;

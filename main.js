@@ -93,7 +93,7 @@ jQuery(function ($) {
           target.removeClass("-1");
         }
         target.css("display","block");
-        if (obj.$el.hasClass("first1")) {
+        if (obj.$el.hasClass("1-1")) {
           target.css({
             "background-image": "url(img/horse1.jpg)",
             "background-size": "50px auto",
@@ -102,18 +102,18 @@ jQuery(function ($) {
           target.addClass("1");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".second1").css("display", "block");
+            $(".1-2").css("display", "block");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".third1").css("display", "block");
+            $(".1-3").css("display", "block");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".fourth1").css("display", "block");
+            $(".1-4").css("display", "block");
           }
         }
-        if (obj.$el.hasClass("second1")) {
+        if (obj.$el.hasClass("1-2")) {
           target.css({
             "background-image": "url(img/horse2.jpg)",
             "background-size": "50px auto",
@@ -122,18 +122,18 @@ jQuery(function ($) {
           target.addClass("2");
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".first1").css("display", "block");
+            $(".1-1").css("display", "block");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".third1").css("display", "block");
+            $(".1-3").css("display", "block");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".fourth1").css("display", "block");
+            $(".1-4").css("display", "block");
           }
         }
-        if (obj.$el.hasClass("third1")) {
+        if (obj.$el.hasClass("1-3")) {
           target.css({
             "background-image": "url(img/horse3.jpg)",
             "background-size": "50px auto",
@@ -142,18 +142,18 @@ jQuery(function ($) {
           target.addClass("3");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".second1").css("display", "block");
+            $(".1-2").css("display", "block");
           }
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".first1").css("display", "block");
+            $(".1-1").css("display", "block");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".fourth1").css("display", "block");
+            $(".1-4").css("display", "block");
           }
         }
-        if (obj.$el.hasClass("fourth1")) {
+        if (obj.$el.hasClass("1-4")) {
           target.css({
             "background-image": "url(img/horse4.jpg)",
             "background-size": "50px auto",
@@ -162,15 +162,15 @@ jQuery(function ($) {
           target.addClass("4");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".second1").css("display", "block");
+            $(".1-2").css("display", "block");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".third1").css("display", "block");
+            $(".1-3").css("display", "block");
           }
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".first1").css("display", "block");
+            $(".1-1").css("display", "block");
           }
         }
       }
@@ -197,19 +197,19 @@ jQuery(function ($) {
         });
         object.$el.addClass("-1");
         if (object.$el.hasClass("1")) {
-          $(".first1").css("display", "block");
+          $(".1-1").css("display", "block");
           object.$el.removeClass("1");
         }
         if (object.$el.hasClass("2")) {
-          $(".second1").css("display", "block");
+          $(".1-2").css("display", "block");
           object.$el.removeClass("2");
         }
         if (object.$el.hasClass("3")) {
-          $(".third1").css("display", "block");
+          $(".1-3").css("display", "block");
           object.$el.removeClass("3");
         }
         if (object.$el.hasClass("4")) {
-          $(".fourth1").css("display", "block");
+          $(".1-4").css("display", "block");
           object.$el.removeClass("4");
         }
       }
@@ -238,7 +238,7 @@ jQuery(function ($) {
         if(target.hasClass("-1")){
           target.removeClass("-1");
         }
-        if (obj.$el.hasClass("first2")) {
+        if (obj.$el.hasClass("2-1")) {
           target.css({
             "background-image": "url(img/horse1.jpg)",
             "background-size": "50px auto",
@@ -247,18 +247,18 @@ jQuery(function ($) {
           target.addClass("1");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".second2").css("display", "block");
+            $(".2-2").css("display", "block");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".third2").css("display", "block");
+            $(".2-3").css("display", "block");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".fourth2").css("display", "block");
+            $(".2-4").css("display", "block");
           }
         }
-        if (obj.$el.hasClass("second2")) {
+        if (obj.$el.hasClass("2-2")) {
           target.css({
             "background-image": "url(img/horse2.jpg)",
             "background-size": "50px auto",
@@ -267,18 +267,18 @@ jQuery(function ($) {
           target.addClass("2");
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".first2").css("display", "block");
+            $(".2-1").css("display", "block");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".third2").css("display", "block");
+            $(".2-3").css("display", "block");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".fourth2").css("display", "block");
+            $(".2-4").css("display", "block");
           }
         }
-        if (obj.$el.hasClass("third2")) {
+        if (obj.$el.hasClass("2-3")) {
           target.css({
             "background-image": "url(img/horse3.jpg)",
             "background-size": "50px auto",
@@ -287,18 +287,18 @@ jQuery(function ($) {
           target.addClass("3");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".second2").css("display", "block");
+            $(".2-2").css("display", "block");
           }
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".first2").css("display", "block");
+            $(".2-1").css("display", "block");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".fourth2").css("display", "block");
+            $(".2-4").css("display", "block");
           }
         }
-        if (obj.$el.hasClass("fourth2")) {
+        if (obj.$el.hasClass("2-4")) {
           target.css({
             "background-image": "url(img/horse4.jpg)",
             "background-size": "50px auto",
@@ -307,15 +307,15 @@ jQuery(function ($) {
           target.addClass("4");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".second2").css("display", "block");
+            $(".2-2").css("display", "block");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".third2").css("display", "block");
+            $(".2-3").css("display", "block");
           }
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".first2").css("display", "block");
+            $(".2-1").css("display", "block");
           }
         }
       }
@@ -343,19 +343,19 @@ jQuery(function ($) {
         });
         object.$el.addClass("-1");
         if (object.$el.hasClass("1")) {
-          $(".first2").css("display", "block");
+          $(".2-1").css("display", "block");
           object.$el.removeClass("1");
         }
         if (object.$el.hasClass("2")) {
-          $(".second2").css("display", "block");
+          $(".2-2").css("display", "block");
           object.$el.removeClass("2");
         }
         if (object.$el.hasClass("3")) {
-          $(".third2").css("display", "block");
+          $(".2-3").css("display", "block");
           object.$el.removeClass("3");
         }
         if (object.$el.hasClass("4")) {
-          $(".fourth2").css("display", "block");
+          $(".2-4").css("display", "block");
           object.$el.removeClass("4");
         }
       }
