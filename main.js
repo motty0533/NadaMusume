@@ -89,8 +89,8 @@ jQuery(function ($) {
         if (!target.hasClass("dropped-sin")) {
           target.addClass("dropped-sin");
         }
-        if (target.hasClass("0")) {
-          target.removeClass("0");
+        if (target.hasClass("-1")) {
+          target.removeClass("-1");
         }
         target.css("display","block");
         if (obj.$el.hasClass("first1")) {
@@ -195,7 +195,7 @@ jQuery(function ($) {
           "background-color": "transparent",
           "background-image": "url()",
         });
-        object.$el.addClass("0");
+        object.$el.addClass("-1");
         if (object.$el.hasClass("1")) {
           $(".first1").css("display", "block");
           object.$el.removeClass("1");
@@ -235,8 +235,8 @@ jQuery(function ($) {
           target.addClass("dropped-tri");
         }
         target.css("display", "block");
-        if(target.hasClass("0")){
-          target.removeClass("0");
+        if(target.hasClass("-1")){
+          target.removeClass("-1");
         }
         if (obj.$el.hasClass("first2")) {
           target.css({
@@ -341,7 +341,7 @@ jQuery(function ($) {
           "background-color": "transparent",
           "background-image": "url()",
         });
-        object.$el.addClass("0");
+        object.$el.addClass("-1");
         if (object.$el.hasClass("1")) {
           $(".first2").css("display", "block");
           object.$el.removeClass("1");
@@ -361,10 +361,10 @@ jQuery(function ($) {
       }
       else {
         let target_tri = object.activeDropRegions[0].children(".box-tri");
-        let tmp = "0";
-        if (target_tri.hasClass("0")) {
-          tmp = "0";
-          target_tri.removeClass("0");
+        let tmp = "-1";
+        if (target_tri.hasClass("-1")) {
+          tmp = "-1";
+          target_tri.removeClass("-1");
           object.$el.css("display", "none");
           object.$el.css({
             "background-color": "transparent",
@@ -384,9 +384,9 @@ jQuery(function ($) {
             });
           }
         }
-        if (object.$el.hasClass("0")) {
-          target_tri.addClass("0");
-          object.$el.removeClass("0");
+        if (object.$el.hasClass("-1")) {
+          target_tri.addClass("-1");
+          object.$el.removeClass("-1");
           target_tri.css("display", "none");
           target_tri.css({
             "background-color": "transparent",
