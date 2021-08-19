@@ -85,7 +85,7 @@ jQuery(function ($) {
     stop: function (ev, obj) {
       obj.$el.css("z-index", "auto");
       if (obj.activeDropRegions.length > 0) {
-        obj.$el.css("display", "none");
+        obj.$el.css("visibility", "hidden");
         let target = obj.activeDropRegions[0].children(".box-sin");
         if (!target.hasClass("dropped-sin")) {
           target.addClass("dropped-sin");
@@ -93,7 +93,7 @@ jQuery(function ($) {
         if (target.hasClass("-1")) {
           target.removeClass("-1");
         }
-        target.css("display","block");
+        target.css("visibility","visible");
         if (obj.$el.hasClass("1-1")) {
           target.css({
             "background-image": "url(img/horse1.jpg)",
@@ -103,15 +103,15 @@ jQuery(function ($) {
           target.addClass("1");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".1-2").css("display", "block");
+            $(".1-2").css("visibility", "visible");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".1-3").css("display", "block");
+            $(".1-3").css("visibility", "visible");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".1-4").css("display", "block");
+            $(".1-4").css("visibility", "visible");
           }
         }
         if (obj.$el.hasClass("1-2")) {
@@ -123,15 +123,15 @@ jQuery(function ($) {
           target.addClass("2");
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".1-1").css("display", "block");
+            $(".1-1").css("visibility", "visible");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".1-3").css("display", "block");
+            $(".1-3").css("visibility", "visible");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".1-4").css("display", "block");
+            $(".1-4").css("visibility", "visible");
           }
         }
         if (obj.$el.hasClass("1-3")) {
@@ -143,15 +143,15 @@ jQuery(function ($) {
           target.addClass("3");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".1-2").css("display", "block");
+            $(".1-2").css("visibility", "visible");
           }
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".1-1").css("display", "block");
+            $(".1-1").css("visibility", "visible");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".1-4").css("display", "block");
+            $(".1-4").css("visibility", "visible");
           }
         }
         if (obj.$el.hasClass("1-4")) {
@@ -163,15 +163,15 @@ jQuery(function ($) {
           target.addClass("4");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".1-2").css("display", "block");
+            $(".1-2").css("visibility", "visible");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".1-3").css("display", "block");
+            $(".1-3").css("visibility", "visible");
           }
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".1-1").css("display", "block");
+            $(".1-1").css("visibility", "visible");
           }
         }
       }
@@ -191,26 +191,26 @@ jQuery(function ($) {
     stop: function (event, object) {
       if (object.activeDropRegions.length == 0) {
         object.$el.removeClass("dropped-sin");
-        object.$el.css("display", "none");
+        object.$el.css("visibility", "hidden");
         object.$el.css({
           "background-color": "transparent",
           "background-image": "url()",
         });
         object.$el.addClass("-1");
         if (object.$el.hasClass("1")) {
-          $(".1-1").css("display", "block");
+          $(".1-1").css("visibility", "visible");
           object.$el.removeClass("1");
         }
         if (object.$el.hasClass("2")) {
-          $(".1-2").css("display", "block");
+          $(".1-2").css("visibility", "visible");
           object.$el.removeClass("2");
         }
         if (object.$el.hasClass("3")) {
-          $(".1-3").css("display", "block");
+          $(".1-3").css("visibility", "visible");
           object.$el.removeClass("3");
         }
         if (object.$el.hasClass("4")) {
-          $(".1-4").css("display", "block");
+          $(".1-4").css("visibility", "visible");
           object.$el.removeClass("4");
         }
       }
@@ -230,12 +230,12 @@ jQuery(function ($) {
     stop: function (ev, obj) {
       obj.$el.css("z-index", "auto");
       if (obj.activeDropRegions.length > 0) {
-        obj.$el.css("display", "none");
+        obj.$el.css("visibility", "hidden");
         let target = obj.activeDropRegions[0].children(".box-tri");
         if (!target.hasClass("dropped-tri")) {
           target.addClass("dropped-tri");
         }
-        target.css("display", "block");
+        target.css("visibility", "visible");
         if(target.hasClass("-1")){
           target.removeClass("-1");
         }
@@ -248,15 +248,15 @@ jQuery(function ($) {
           target.addClass("1");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".2-2").css("display", "block");
+            $(".2-2").css("visibility", "visible");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".2-3").css("display", "block");
+            $(".2-3").css("visibility", "visible");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".2-4").css("display", "block");
+            $(".2-4").css("visibility", "visible");
           }
         }
         if (obj.$el.hasClass("2-2")) {
@@ -268,15 +268,15 @@ jQuery(function ($) {
           target.addClass("2");
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".2-1").css("display", "block");
+            $(".2-1").css("visibility", "visible");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".2-3").css("display", "block");
+            $(".2-3").css("visibility", "visible");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".2-4").css("display", "block");
+            $(".2-4").css("visibility", "visible");
           }
         }
         if (obj.$el.hasClass("2-3")) {
@@ -288,15 +288,15 @@ jQuery(function ($) {
           target.addClass("3");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".2-2").css("display", "block");
+            $(".2-2").css("visibility", "visible");
           }
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".2-1").css("display", "block");
+            $(".2-1").css("visibility", "visible");
           }
           if (target.hasClass("4")) {
             target.removeClass("4");
-            $(".2-4").css("display", "block");
+            $(".2-4").css("visibility", "visible");
           }
         }
         if (obj.$el.hasClass("2-4")) {
@@ -308,15 +308,15 @@ jQuery(function ($) {
           target.addClass("4");
           if (target.hasClass("2")) {
             target.removeClass("2");
-            $(".2-2").css("display", "block");
+            $(".2-2").css("visibility", "visible");
           }
           if (target.hasClass("3")) {
             target.removeClass("3");
-            $(".2-3").css("display", "block");
+            $(".2-3").css("visibility", "visible");
           }
           if (target.hasClass("1")) {
             target.removeClass("1");
-            $(".2-1").css("display", "block");
+            $(".2-1").css("visibility", "visible");
           }
         }
       }
@@ -337,7 +337,7 @@ jQuery(function ($) {
       object.$el.css("z-index", "30");
       if (object.activeDropRegions.length == 0) {
         object.$el.removeClass("dropped-sin");
-        object.$el.css("display", "none");
+        object.$el.css("visibility", "hidden");
         object.$el.css({
           "background-color": "transparent",
           "background-image": "url()",
@@ -346,7 +346,7 @@ jQuery(function ($) {
         for(let i=1;i<=num;i++){
           let j=String(i);
           if (object.$el.hasClass(j)) {
-            $(".2-"+j).css("display", "block");
+            $(".2-"+j).css("visibility", "visible");
             object.$el.removeClass(j);
           }
         }
@@ -357,7 +357,7 @@ jQuery(function ($) {
         if (target_tri.hasClass("-1")) {
           tmp = "-1";
           target_tri.removeClass("-1");
-          object.$el.css("display", "none");
+          object.$el.css("visibility", "hidden");
           object.$el.css({
             "background-color": "transparent",
             "background-image": "url()",
@@ -368,7 +368,7 @@ jQuery(function ($) {
           if (target_tri.hasClass(j)) {
             tmp = j;
             target_tri.removeClass(j);
-            object.$el.css("display", "block");
+            object.$el.css("visibility", "visible");
             object.$el.css({
               "background-image": "url(img/horse" + j + ".jpg)",
               "background-size": "50px auto",
@@ -379,7 +379,7 @@ jQuery(function ($) {
         if (object.$el.hasClass("-1")) {
           target_tri.addClass("-1");
           object.$el.removeClass("-1");
-          target_tri.css("display", "none");
+          target_tri.css("visibility", "hidden");
           target_tri.css({
             "background-color": "transparent",
             "background-image": "url()",
@@ -390,7 +390,7 @@ jQuery(function ($) {
           if (object.$el.hasClass(j)) {
             target_tri.addClass(j);
             object.$el.removeClass(j);
-            target_tri.css("display", "block");
+            target_tri.css("visibility", "visible");
             target_tri.css({
               "background-image": "url(img/horse" + j + ".jpg)",
               "background-size": "50px auto",
