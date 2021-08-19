@@ -125,7 +125,7 @@ header{
   background-color: #fff;
   color: black;
 }
-#sin-first{
+#sin-first,#tri-first,#tri-second,#tri-third{
   padding: 0.2em 1em;
   margin:0px;
   position: absolute;
@@ -133,7 +133,7 @@ header{
   width: 50px;
   height: 50px;
 }
-.box-sin{
+.box-sin,.box-tri{
   margin:0px;
   position: absolute;
   top: 0%;left: 0%;

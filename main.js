@@ -79,18 +79,20 @@ jQuery(function ($) {
 
     },
     drag: function (ev, obj) {
-      obj.$el.css("z-index", "30");
+      obj.$el.css("z-index", "31");
     },
     stop: function (ev, obj) {
       obj.$el.css("z-index", "auto");
       if (obj.activeDropRegions.length > 0) {
         obj.$el.css("display", "none");
-        var target = obj.activeDropRegions[0].children(".box-sin");
+        let target = obj.activeDropRegions[0].children(".box-sin");
         if (!target.hasClass("dropped-sin")) {
           target.addClass("dropped-sin");
         }
+        if (target.hasClass("0")) {
+          target.removeClass("0");
+        }
         target.css("display","block");
-        $("#sin-first").css("display", "none");
         if (obj.$el.hasClass("first1")) {
           target.css({
             "background-image": "url(img/horse1.jpg)",
@@ -171,47 +173,45 @@ jQuery(function ($) {
             $(".first1").css("display", "block");
           }
         }
-        $(target).pep({
-          shouldEase: false,
-          place: false,
-          droppable: $(this).closest('.vote-sin'),        // dropを許可する要素
-          revert: true,
-          start: function (event, object) {
+      }
+    }
+  });
+  $('.box-sin').pep({
+    shouldEase: false,
+    place: false,
+    droppable: '.vote-sin',        // dropを許可する要素
+    revert: true,
+    start: function (event, object) {
 
-          },
-          drag: function (event, object) {
-            $('#sin-first').css("display", "block");
-          },
-          stop: function (event, object) {
-            if (object.activeDropRegions.length == 0) {
-              object.$el.removeClass("dropped-sin");
-              object.$el.css("display", "none");
-              object.$el.css({
-                "background-color": "transparent",
-                "background-image": "url()",
-              });
-              if (object.$el.hasClass("1")) {
-                $(".first1").css("display", "block");
-                object.$el.removeClass("1");
-              }
-              if (object.$el.hasClass("2")) {
-                $(".second1").css("display", "block");
-                object.$el.removeClass("2");
-              }
-              if (object.$el.hasClass("3")) {
-                $(".third1").css("display", "block");
-                object.$el.removeClass("3");
-              }
-              if (object.$el.hasClass("4")) {
-                $(".fourth1").css("display", "block");
-                object.$el.removeClass("4");
-              }
-            }
-            else {
-              $('#sin-first').css("display", "none");
-            }
-          }
+    },
+    drag: function (event, object) {
+
+    },
+    stop: function (event, object) {
+      if (object.activeDropRegions.length == 0) {
+        object.$el.removeClass("dropped-sin");
+        object.$el.css("display", "none");
+        object.$el.css({
+          "background-color": "transparent",
+          "background-image": "url()",
         });
+        object.$el.addClass("0");
+        if (object.$el.hasClass("1")) {
+          $(".first1").css("display", "block");
+          object.$el.removeClass("1");
+        }
+        if (object.$el.hasClass("2")) {
+          $(".second1").css("display", "block");
+          object.$el.removeClass("2");
+        }
+        if (object.$el.hasClass("3")) {
+          $(".third1").css("display", "block");
+          object.$el.removeClass("3");
+        }
+        if (object.$el.hasClass("4")) {
+          $(".fourth1").css("display", "block");
+          object.$el.removeClass("4");
+        }
       }
     }
   });
@@ -224,166 +224,190 @@ jQuery(function ($) {
 
     },
     drag: function (ev, obj) {
-
+      obj.$el.css("z-index", "30");
     },
     stop: function (ev, obj) {
-      
+      obj.$el.css("z-index", "auto");
+      if (obj.activeDropRegions.length > 0) {
+        obj.$el.css("display", "none");
+        let target = obj.activeDropRegions[0].children(".box-tri");
+        if (!target.hasClass("dropped-tri")) {
+          target.addClass("dropped-tri");
+        }
+        target.css("display", "block");
+        if(target.hasClass("0")){
+          target.removeClass("0");
+        }
+        if (obj.$el.hasClass("first2")) {
+          target.css({
+            "background-image": "url(img/horse1.jpg)",
+            "background-size": "50px auto",
+            "background-position": "top left"
+          });
+          target.addClass("1");
+          if (target.hasClass("2")) {
+            target.removeClass("2");
+            $(".second2").css("display", "block");
+          }
+          if (target.hasClass("3")) {
+            target.removeClass("3");
+            $(".third2").css("display", "block");
+          }
+          if (target.hasClass("4")) {
+            target.removeClass("4");
+            $(".fourth2").css("display", "block");
+          }
+        }
+        if (obj.$el.hasClass("second2")) {
+          target.css({
+            "background-image": "url(img/horse2.jpg)",
+            "background-size": "50px auto",
+            "background-position": "top left"
+          });
+          target.addClass("2");
+          if (target.hasClass("1")) {
+            target.removeClass("1");
+            $(".first2").css("display", "block");
+          }
+          if (target.hasClass("3")) {
+            target.removeClass("3");
+            $(".third2").css("display", "block");
+          }
+          if (target.hasClass("4")) {
+            target.removeClass("4");
+            $(".fourth2").css("display", "block");
+          }
+        }
+        if (obj.$el.hasClass("third2")) {
+          target.css({
+            "background-image": "url(img/horse3.jpg)",
+            "background-size": "50px auto",
+            "background-position": "top left"
+          });
+          target.addClass("3");
+          if (target.hasClass("2")) {
+            target.removeClass("2");
+            $(".second2").css("display", "block");
+          }
+          if (target.hasClass("1")) {
+            target.removeClass("1");
+            $(".first2").css("display", "block");
+          }
+          if (target.hasClass("4")) {
+            target.removeClass("4");
+            $(".fourth2").css("display", "block");
+          }
+        }
+        if (obj.$el.hasClass("fourth2")) {
+          target.css({
+            "background-image": "url(img/horse4.jpg)",
+            "background-size": "50px auto",
+            "background-position": "top left"
+          });
+          target.addClass("4");
+          if (target.hasClass("2")) {
+            target.removeClass("2");
+            $(".second2").css("display", "block");
+          }
+          if (target.hasClass("3")) {
+            target.removeClass("3");
+            $(".third2").css("display", "block");
+          }
+          if (target.hasClass("1")) {
+            target.removeClass("1");
+            $(".first2").css("display", "block");
+          }
+        }
+      }
     }
   });
-  /*$('.horse-sin').on('MSPointerDown touchstart mousedown', function (e) {
-    $(this).pep({
-      shouldEase: false,
-      place: false,
-      droppable: '.vote-sin',        // dropを許可する要素
-      revert: true,
-      start: function (ev, obj) {
+  $('.box-tri').pep({
+    shouldEase: false,
+    place: false,
+    droppable: '.vote-tri',        // dropを許可する要素
+    revert: true,
+    start: function (event, object) {
 
-      },
-      drag: function (ev, obj) {
-        obj.$el.css("z-index","30");
-      },
-      stop: function (ev, obj) {
-        obj.$el.css("z-index", "auto");
-        if (obj.activeDropRegions.length > 0) {
-          obj.$el.css("display", "none");
-          var target = obj.activeDropRegions[0].children(".box-sin");
-          if (!target.hasClass("dropped-sin")) {
-            target.addClass("dropped-sin");
-          }
-          $("#sin-first").css("display", "none");
-          if (obj.$el.hasClass("first1")) {
-            target.css({
-              "background-image": "url(img/horse1.jpg)",
-              "background-size": "50px auto",
-              "background-position": "top left"
-            });
-            target.addClass("1");
-            if (target.hasClass("2")) {
-              target.removeClass("2");
-              $(".second1").css("display", "block");
-            }
-            if (target.hasClass("3")) {
-              target.removeClass("3");
-              $(".third1").css("display", "block");
-            }
-            if (target.hasClass("4")) {
-              target.removeClass("4");
-              $(".fourth1").css("display", "block");
-            }
-          }
-          if (obj.$el.hasClass("second1")) {
-            target.css({
-              "background-image": "url(img/horse2.jpg)",
-              "background-size": "50px auto",
-              "background-position": "top left"
-            });
-            target.addClass("2");
-            if (target.hasClass("1")) {
-              target.removeClass("1");
-              $(".first1").css("display", "block");
-            }
-            if (target.hasClass("3")) {
-              target.removeClass("3");
-              $(".third1").css("display", "block");
-            }
-            if (target.hasClass("4")) {
-              target.removeClass("4");
-              $(".fourth1").css("display", "block");
-            }
-          }
-          if (obj.$el.hasClass("third1")) {
-            target.css({
-              "background-image": "url(img/horse3.jpg)",
-              "background-size": "50px auto",
-              "background-position": "top left"
-            });
-            target.addClass("3");
-            if (target.hasClass("2")) {
-              target.removeClass("2");
-              $(".second1").css("display", "block");
-            }
-            if (target.hasClass("1")) {
-              target.removeClass("1");
-              $(".first1").css("display", "block");
-            }
-            if (target.hasClass("4")) {
-              target.removeClass("4");
-              $(".fourth1").css("display", "block");
-            }
-          }
-          if (obj.$el.hasClass("fourth1")) {
-            target.css({
-              "background-image": "url(img/horse4.jpg)",
-              "background-size": "50px auto",
-              "background-position": "top left"
-            });
-            target.addClass("4");
-            if (target.hasClass("2")) {
-              target.removeClass("2");
-              $(".second1").css("display", "block");
-            }
-            if (target.hasClass("3")) {
-              target.removeClass("3");
-              $(".third1").css("display", "block");
-            }
-            if (target.hasClass("1")) {
-              target.removeClass("1");
-              $(".first1").css("display", "block");
-            }
-          }
+    },
+    drag: function (event, object) {
+      object.$el.css("z-index", "31");
+    },
+    stop: function (event, object) {
+      object.$el.css("z-index", "30");
+      if (object.activeDropRegions.length == 0) {
+        object.$el.removeClass("dropped-sin");
+        object.$el.css("display", "none");
+        object.$el.css({
+          "background-color": "transparent",
+          "background-image": "url()",
+        });
+        object.$el.addClass("0");
+        if (object.$el.hasClass("1")) {
+          $(".first2").css("display", "block");
+          object.$el.removeClass("1");
+        }
+        if (object.$el.hasClass("2")) {
+          $(".second2").css("display", "block");
+          object.$el.removeClass("2");
+        }
+        if (object.$el.hasClass("3")) {
+          $(".third2").css("display", "block");
+          object.$el.removeClass("3");
+        }
+        if (object.$el.hasClass("4")) {
+          $(".fourth2").css("display", "block");
+          object.$el.removeClass("4");
         }
       }
-    });
-  });
-  $('.horse-tri').on('MSPointerDown touchstart mousedown', function (e) {
-    $(this).pep({
-      shouldEase: false,
-      place: false,
-      droppable: '.box-tri',        // dropを許可する要素
-      revert: true,
-      start: function (ev, obj) {
-
-      },
-      drag: function (ev, obj) {
-
-      },
-      stop: function (ev, obj) {
-      }
-    });
-  });
-  $('document').on('MSPointerDown touchstart mousedown', '.dropped-sin' ,function (e) {
-      $(this).pep({
-        shouldEase: false,
-        place: false,
-        droppable: '.single .box',        // dropを許可する要素
-        revert: true,
-        start: function (ev, obj) {
-
-        },
-        drag: function (ev, obj) {
-
-        },
-        stop: function (ev, obj) {
-          if (obj.activeDropRegions.length > 0) {
-            if (obj.activeDropRegions[0].hasClass("single")) {
-              obj.$el.removeClass("dropped-sin");
-              obj.$el.css("background-color", transparent);
-              $('#sin-first').css("display", "inline");
-              if (obj.$el.hasClass("1")) {
-                $(".first1").css("display", "block");
-              }
-              if (obj.$el.hasClass("2")) {
-                $(".second1").css("display", "block");
-              }
-              if (obj.$el.hasClass("3")) {
-                $(".third1").css("display", "block");
-              }
-              if (obj.$el.hasClass("4")) {
-                $(".fourth1").css("display", "block");
-              }
-            }
+      else {
+        let target_tri = object.activeDropRegions[0].children(".box-tri");
+        let tmp = "0";
+        if (target_tri.hasClass("0")) {
+          tmp = "0";
+          target_tri.removeClass("0");
+          object.$el.css("display", "none");
+          object.$el.css({
+            "background-color": "transparent",
+            "background-image": "url()",
+          });
+        }
+        for (let i = 1; i <= 4; i++) {
+          let j = String(i);
+          if (target_tri.hasClass(j)) {
+            tmp = j;
+            target_tri.removeClass(j);
+            object.$el.css("display", "block");
+            object.$el.css({
+              "background-image": "url(img/horse" + j + ".jpg)",
+              "background-size": "50px auto",
+              "background-position": "top left"
+            });
           }
         }
-      });
-    });*/
+        if (object.$el.hasClass("0")) {
+          target_tri.addClass("0");
+          object.$el.removeClass("0");
+          target_tri.css("display", "none");
+          target_tri.css({
+            "background-color": "transparent",
+            "background-image": "url()",
+          });
+        }
+        for (let i = 1; i <= 4; i++) {
+          let j = String(i);
+          if (object.$el.hasClass(j)) {
+            target_tri.addClass(j);
+            object.$el.removeClass(j);
+            target_tri.css("display", "block");
+            target_tri.css({
+              "background-image": "url(img/horse" + j + ".jpg)",
+              "background-size": "50px auto",
+              "background-position": "top left"
+            });
+          }
+        }
+        object.$el.addClass(tmp);
+      }
+    }
+  });
 });

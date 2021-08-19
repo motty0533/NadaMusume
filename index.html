@@ -44,7 +44,7 @@
       <h2 class="midashi">単勝</h2>
       <div class="box vote-sin">
         <div id="sin-first"><span>一位</span></div>
-        <div class="box-sin"></div>
+        <div class="box-sin first 0"></div>
       </div>
       <div class="candidate">
         <div  class="horse horse-sin first1"><img src="img/horse1.jpg" alt="候補者その１" draggable="false"></div>
@@ -62,20 +62,23 @@
       <h2 class="midashi">三連単</h2>
       <div class="boxes">
         <div class="box vote-tri">
-          <div class="box-tri"><span id="tri-first">一位</span></div>
+          <div id="tri-first"><span>一位</span></div>
+          <div class="box-tri first 0"></div>
         </div>
         <div class="box vote-tri">
-          <div class="box-tri"><span id="tri-second">二位</span></div>
+          <div id="tri-second"><span>二位</span></div>
+          <div class="box-tri second 0"></div>
         </div>
         <div class="box vote-tri">
-          <div class="box-tri"><span id="tri-third">三位</span></div>
+          <div id="tri-third"><span>三位</span></div>
+          <div class="box-tri third 0"></div>
         </div>
       </div>
       <div class="candidate">
-        <img src="img/horse1.jpg" alt="候補者その１" class="horse horse-tri first2">
-        <img src="img/horse2.jpg" alt="候補者その２" class="horse horse-tri second2">
-        <img src="img/horse3.jpg" alt="候補者その３" class="horse horse-tri third2">
-        <img src="img/horse4.jpg" alt="候補者その４" class="horse horse-tri fourth2">
+        <div class="horse horse-tri first2"><img src="img/horse1.jpg" alt="候補者その１" draggable="false"></div>
+        <div class="horse horse-tri second2"><img src="img/horse2.jpg" alt="候補者その２" draggable="false"></div>
+        <div class="horse horse-tri third2"><img src="img/horse3.jpg" alt="候補者その３" draggable="false"></div>
+        <div class="horse horse-tri fourth2"><img src="img/horse4.jpg" alt="候補者その４" draggable="false"></div>
       </div>
       <div class="cp_iptxt">
         <input class="ef tripleform" type="number" form="form1" min="1" max="100" placeholder="">
