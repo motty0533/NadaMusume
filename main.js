@@ -94,7 +94,7 @@ jQuery(function ($) {
             droppable: '.box',        // dropを許可する要素
             revert: true,
             start: function (event, object) {
-
+              $('#sin-first').css("display", "inline");
             },
             drag: function (event, object) {
               object.$el.css("z-index", "30");
@@ -107,7 +107,6 @@ jQuery(function ($) {
                   "background-color": "transparent",
                   "background-image": "url()",
                 });
-                $('#sin-first').css("display", "inline");
                 if (object.$el.hasClass("1")) {
                   $(".first1").css("display", "block");
                 }
@@ -120,6 +119,9 @@ jQuery(function ($) {
                 if (object.$el.hasClass("4")) {
                   $(".fourth1").css("display", "block");
                 }
+              }
+              else{
+                $('#sin-first').css("display", "none");
               }
             }
           });
