@@ -32,42 +32,34 @@ $(function(){
     }
   });
   // タブ機能
-  $('#work').each(function () {
-
     // タブの各要素を jQuery オブジェクト化
-    var $tabList    = $(this).find('.tabs-nav'),   // タブのリスト
-        $tabAnchors = $tabList.find('a'),          // タブ (リンク)
-        $tabPanels  = $(this).find('.tabs-panel'); // パネル
-
-    // タブがクリックされたときの処理
-    // 引数としてイベントオブジェクトを受け取る
-    $tabList.on('click', 'a', function (event) {
-
-        // リンクのクリックに対するデフォルトの動作をキャンセル
-        event.preventDefault();
-
-        // クリックされたタブを jQuery オブジェクト化
-        var $this = $(this);
-
-        // もしすでに選択されたタブならなにもせず処理を中止
-        if ($this.hasClass('active')) {
-            return;
-        }
-
-        // すべてのタブの選択状態をいったん解除し、
-        // クリックされたタブを選択状態に
-        $tabAnchors.removeClass('active');
-        $this.addClass('active');
-
-        // すべてのパネルをいったん非表示にし、
-        // クリックされたタブに対応するパネルを表示
-        $tabPanels.hide();
-        $($this.attr('href')).show();
+    var border = $("#border div");
+    $('#work').tabs({
+      hide:{duration:250},
+      show:{duration:125},
     });
-    // 最初のタブを選択状態に
-    $tabAnchors.eq(0).trigger('click');
-})
-});
+    $('.uitab').on('click',function(){
+      $('.uitab').removeClass('active');
+      $(this).addClass('active');
+    });
+    $("#work").bind('tabsactivate', function(event, ui) {
+      // クリックされたタブのインデックス
+      // インデックスは 0 から始まるので + 1
+      var selected = ui.newTab.index() + 1;
+      console.log(selected);
+      if(selected==1){
+        //border.css("left","0%");
+        (border).animate({left:0},10,'linear');
+      }else if(selected==2){
+        //border.css("left","50%");
+        (border).animate({left:'50%'},10,'linear');
+      }else{
+        console.log("error");
+      }
+    });
+  });
+
+
 // ドラッグアンドドロップ
 jQuery(function ($) {
   var num=4;
