@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <script src="/vendor/jquery-1.10.2.min.js"></script>
-  <script src="/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-  <script src="/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://rawgithub.com/briangonzalez/jquery.pep.js/master/src/jquery.pep.js"></script>
+  <script src="main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
@@ -41,7 +42,7 @@
   <section class="contents tabs-panel" id="vote">
     <section class="single">
       <h2 class="midashi">単勝</h2>
-      <div class="box">
+      <div class="box vote-sin">
         <div class="box-sin"><span id="sin-first">一位</span></div>
       </div>
       <div class="candidate">
@@ -59,9 +60,15 @@
     <section class="triple">
       <h2 class="midashi">三連単</h2>
       <div class="boxes">
-        <div class="box box-tri">一位</div>
-        <div class="box box-tri">二位</div>
-        <div class="box box-tri">三位</div>
+        <div class="box vote-tri">
+          <div class="box-tri"><span id="tri-first">一位</span></div>
+        </div>
+        <div class="box vote-tri">
+          <div class="box-tri"><span id="tri-second">二位</span></div>
+        </div>
+        <div class="box vote-tri">
+          <div class="box-tri"><span id="tri-third">三位</span></div>
+        </div>
       </div>
       <div class="candidate">
         <img src="img/horse1.jpg" alt="候補者その１" class="horse horse-tri first2">
@@ -87,126 +94,3 @@
 </div>
 </body>
 </html>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="https://rawgithub.com/briangonzalez/jquery.pep.js/master/src/jquery.pep.js"></script>
-<script>
-  jQuery(function ($) {
-    $('.horse-sin').on('MSPointerDown touchstart mousedown', function (e) {
-      $(this).pep({
-        shouldEase: false,
-        place: false,
-        droppable: '.box-sin',        // dropを許可する要素
-        revert: true,
-        start: function (ev, obj) {
-
-        },
-        drag: function (ev, obj) {
-          console.log(obj.activeDropRegions);
-          console.log(obj.$el.hasClass("first1"))
-        },
-        stop: function (ev, obj) {
-          if(obj.activeDropRegions.length>0){
-            obj.$el.css("display","none");
-            $("#sin-first").css("display", "none");
-            if (obj.$el.hasClass("first1")) {
-              obj.activeDropRegions[0].css({
-                "background-image" : "url(img/horse1.jpg)",
-                "background-size" : "50px auto",
-                "background-position" : "top left"
-              });
-              obj.activeDropRegions[0].addClass("1");
-              if(obj.activeDropRegions[0].hasClass("2")){
-                obj.activeDropRegions[0].removeClass("2");
-                $(".second1").css("display","block");
-              }
-              if (obj.activeDropRegions[0].hasClass("3")) {
-                obj.activeDropRegions[0].removeClass("3");
-                $(".third1").css("display", "block");
-              }
-              if (obj.activeDropRegions[0].hasClass("4")) {
-                obj.activeDropRegions[0].removeClass("4");
-                $(".fourth1").css("display", "block");
-              }
-            }
-            if (obj.$el.hasClass("second1")) {
-              obj.activeDropRegions[0].css({
-                "background-image": "url(img/horse2.jpg)",
-                "background-size": "50px auto",
-                "background-position": "top left"
-              });
-              obj.activeDropRegions[0].addClass("2");
-              if (obj.activeDropRegions[0].hasClass("1")) {
-                obj.activeDropRegions[0].removeClass("1");
-                $(".first1").css("display", "block");
-              }
-              if (obj.activeDropRegions[0].hasClass("3")) {
-                obj.activeDropRegions[0].removeClass("3");
-                $(".third1").css("display", "block");
-              }
-              if (obj.activeDropRegions[0].hasClass("4")) {
-                obj.activeDropRegions[0].removeClass("4");
-                $(".fourth1").css("display", "block");
-              }
-            }
-            if (obj.$el.hasClass("third1")) {
-              obj.activeDropRegions[0].css({
-                "background-image": "url(img/horse3.jpg)",
-                "background-size": "50px auto",
-                "background-position": "top left"
-              });
-              obj.activeDropRegions[0].addClass("3");
-              if (obj.activeDropRegions[0].hasClass("2")) {
-                obj.activeDropRegions[0].removeClass("2");
-                $(".second1").css("display", "block");
-              }
-              if (obj.activeDropRegions[0].hasClass("1")) {
-                obj.activeDropRegions[0].removeClass("1");
-                $(".first1").css("display", "block");
-              }
-              if (obj.activeDropRegions[0].hasClass("4")) {
-                obj.activeDropRegions[0].removeClass("4");
-                $(".fourth1").css("display", "block");
-              }
-            }
-            if (obj.$el.hasClass("fourth1")) {
-              obj.activeDropRegions[0].css({
-                "background-image": "url(img/horse4.jpg)",
-                "background-size": "50px auto",
-                "background-position": "top left"
-              });
-              obj.activeDropRegions[0].addClass("4");
-              if (obj.activeDropRegions[0].hasClass("2")) {
-                obj.activeDropRegions[0].removeClass("2");
-                $(".second1").css("display", "block");
-              }
-              if (obj.activeDropRegions[0].hasClass("3")) {
-                obj.activeDropRegions[0].removeClass("3");
-                $(".third1").css("display", "block");
-              }
-              if (obj.activeDropRegions[0].hasClass("1")) {
-                obj.activeDropRegions[0].removeClass("1");
-                $(".first1").css("display", "block");
-              }
-            }
-          }
-        }
-      });
-    });
-    $('.horse-tri').on('MSPointerDown touchstart mousedown', function (e) {
-      $(this).pep({
-        shouldEase: false,
-        place: false,
-        droppable: '.box-tri',        // dropを許可する要素
-        revert: true,
-        start: function (ev, obj) {
-
-        },
-        drag: function (ev, obj) {
-
-        },
-        stop: function (ev, obj) {
-        }
-      });
-    });
-  });
-</script>
