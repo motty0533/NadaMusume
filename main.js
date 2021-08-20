@@ -48,14 +48,24 @@ $(function(){
       var selected = ui.newTab.index() + 1;
       console.log(selected);
       if(selected==1){
-        //border.css("left","0%");
         (border).animate({left:0},10,'linear');
       }else if(selected==2){
-        //border.css("left","50%");
         (border).animate({left:'50%'},10,'linear');
       }else{
         console.log("error");
       }
+    });
+
+    //下スクロール中はボタンを消す機構
+    var startPos = 0,winScrollTop = 0;
+    $(window).on('scroll',function(){
+      winScrollTop = $(this).scrollTop();
+      if(winScrollTop>startPos){
+        $('.button1').addClass('hide');
+      } else {
+        $('.button1').removeClass('hide');
+      }
+      startPos = winScrollTop;
     });
   });
 
