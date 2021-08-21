@@ -198,8 +198,12 @@ header{
 .boxes{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
+}
+.tribox{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 h2{
   font-weight: 500;
