@@ -115,3 +115,28 @@ td a:hover::before {
 .modal__content h1,.modal__content p{
   text-align: left;
 }
+@media(max-width:1000px){
+  .midashi{
+    font-size: 2.5rem;
+  }
+  .programtable{
+    border-spacing: 20px;
+  }
+  td{
+    font-weight: 500;
+    width: 80%;
+  }
+  td a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    padding: 20px 8px;
+    font-size: 15px;
+  }
+  .modal__content{
+    width: 90%;
+    max-height: 90%;
+  }
+}
