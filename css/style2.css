@@ -1,0 +1,117 @@
+@charset "UTF-8";
+html{
+  font-size: 100%;
+  font-family: "Noto Sans JP",sans-serif;
+  color: #000;
+}
+.main{
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 4%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+/* ヘッダー */
+header{
+  height: 7em;
+  border-bottom: solid 1px #000;
+  text-align: center;
+  margin-bottom:0px;
+  font-family: 'Shippori Mincho', serif;
+}
+.page-title{
+  font-size: 1em;
+  font-weight: 500;
+}
+.logo{
+  width: 6em;
+  margin-top: -2em;
+  margin-bottom: -4em;
+}
+/* メインコンテンツ */
+.midashi{
+  font-size: 3rem;
+}
+.programtable{
+  text-align: center;
+  border-spacing: 40px;
+  border-collapse: separate;
+}
+td{
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 15%);
+  padding: 0 0;
+  font-weight: 500;
+  width: 70%;
+}
+.js-modal-open{
+  color: #000;
+  text-decoration: none;
+}
+td a{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  padding: 30px 40px;
+}
+/* ホバーした際のアニメーション */
+td a:hover{
+  color: #fff;
+}
+td a::before{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  background: #333;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+td a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+/* モーダルウィンドウ */
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.js-modal-close{
+  display: block;
+  background-color: #e57373;
+  color:#fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  width: 8rem;
+  margin: 30px auto;
+  margin-bottom: 0px;
+}
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+}
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.modal__content h1,.modal__content p{
+  text-align: left;
+}

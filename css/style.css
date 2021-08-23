@@ -4,7 +4,7 @@ html{
   font-family: "Noto Sans JP" "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
   color: #fff;
 }
-body{
+.derby{
   background-image: url("../img/sky.jpg");
   background-size: auto;
   background-position-x: -1100px;
@@ -30,13 +30,14 @@ body{
   font-size: 25px;
   padding-top: 10px;
   padding-bottom: 20px;
-  font-family: 'Kosugi Maru',serif;
+  font-weight: 700;
 }
 .section-header .tabs-nav{
   display: flex;
   justify-content: space-around;
   height: 100%;
 }
+
 .section-header .tabs-nav li {
   float: left;
   position: relative;
@@ -51,7 +52,7 @@ body{
   display: block;
   position: relative;
   text-decoration: none;
-  color: #000;
+  color: #262626;
   padding: 10px;
 }
 #border div{
@@ -64,10 +65,16 @@ body{
   position: relative;
   transition: left 1s cubic-bezier(0.23,1,0.32,1);
 }
+.uitab.active:not(.active),.tabs-nav li  :not(.active){
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 .uitab.active,.tabs-nav li .active{
   background-color: #fff;
-  color:rgba(0, 0, 0, 0.753);
+  color:#262626;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .section-header .tabs-nav a:active::after{
   content: "";
@@ -82,13 +89,10 @@ body{
 header{
   height: 7em;
   border-bottom: solid 1px #fff;
-  
-}
-.page-header{
   text-align: center;
   margin-bottom:0px;
-  font-family: 'Shippori Mincho', serif;
 }
+
 .logo{
   width: 6em;
   margin-top: -2em;
@@ -96,6 +100,8 @@ header{
 }
 .page-title{
   font-size: 1em;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
 }
 /*全体*/
 .main{
@@ -116,15 +122,15 @@ header{
   
 }
 .midashi{
-  font-family: 'Shippori Mincho', serif;
-  font-weight: 600;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
   font-size: 30px;
   background-image: url(../img/marker-white.png); 
   background-size: 14rem,14rem;
   background-position: center top;
   z-index: 20;
   color: rgba(0, 0, 0, 0.753);
-  padding: 2rem 70px;
+  padding: 2.1rem 70px;
 }
 /* 単勝 */
 .single{
@@ -216,7 +222,6 @@ h2{
   height: 5em;
   font-size: 1.625em;
   text-align: center;
-  font-family: 'Kosugi Maru', sans-serif;
   color: #000;
   box-shadow: 0 3px 5px rgba(0,0,0,0.3);
   position: fixed;
@@ -245,7 +250,6 @@ h2{
 	width: 80%;
 	margin: 40px 3%;
   text-align: left;
-  font-family: 'Kosugi Maru';
 }
 .cp_iptxt input[type='number'] {
 	font: 15px/24px sans-serif;

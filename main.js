@@ -48,7 +48,7 @@ $(function(){
       var selected = ui.newTab.index() + 1;
       console.log(selected);
       if(selected==1){
-        (border).animate({left:0},10,'linear');
+        (border).animate({left:'0%'},10,'linear');
       }else if(selected==2){
         (border).animate({left:'50%'},10,'linear');
       }else{
@@ -67,6 +67,23 @@ $(function(){
       }
       startPos = winScrollTop;
     });
+    //モーダルウィンドウ
+    var winScrollTop;
+    $('.js-modal-open').each(function(){
+        $(this).on('click',function(){
+            //スクロール位置を取得
+            winScrollTop = $(window).scrollTop();
+            var target = $(this).data('target');
+            var modal = document.getElementById(target);
+            $(modal).fadeIn();
+            return false;
+        });
+    });
+    $('.js-modal-close').on('click',function(){
+        $('.js-modal').fadeOut();
+        $('body,html').stop().animate({scrollTop:winScrollTop}, 100);
+        return false;
+    }); 
   });
 
 
