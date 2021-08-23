@@ -1,7 +1,7 @@
 @charset "UTF-8";
 html{
   font-size: 100%;
-  font-family: "Noto Sans JP" "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-family: "Noto Sans JP",sans-serif;
   color: #fff;
 }
 .derby{
@@ -31,6 +31,7 @@ html{
   padding-top: 10px;
   padding-bottom: 20px;
   font-weight: 700;
+
 }
 .section-header .tabs-nav{
   display: flex;
@@ -152,7 +153,7 @@ header{
   height: 50px;
   margin-bottom:50px;
   text-align: center;
-  font-family: 'Shippori Mincho',serif;
+  font-family: 'Noto Serif JP',serif;
   font-weight: 600;
   background-color: #fff;
   color: black;
@@ -223,6 +224,7 @@ h2{
   font-size: 1.625em;
   text-align: center;
   color: #000;
+  font-weight: 700;
   box-shadow: 0 3px 5px rgba(0,0,0,0.3);
   position: fixed;
   right:20px;
