@@ -20,7 +20,6 @@ html{
 }
 .mainmidashi{
   position: relative;
-  top: 50%;
 }
 .maintext{
   position: relative;
@@ -37,4 +36,22 @@ html{
   width: 40em;
   margin: 5em 0;
   margin-top: 0em;
+}
+@media(max-width:1000px){
+  .maincatch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainlogo{
+    width: 20em;
+  }
+  .logosec{
+    width: 20em;
+    height: 20em;
+    margin-top: -4em;
+  }
+  .maintext{
+    text-align: center;
+  }
 }
