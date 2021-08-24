@@ -4,6 +4,10 @@ html{
   font-family: "Noto Sans JP",sans-serif;
   color: #fff;
 }
+@font-face {
+	font-family: 'rank';
+	src: url(../font/Korneuburg-Slab-Bold.ttf);
+}
 .derby{
   /*background-color: #4cb5f5;*/
   background-color: #000;
@@ -187,7 +191,9 @@ header a{
 	-webkit-background-clip: text;
 }
 .vote-box{
-  padding: 0.2em 1em;
+  text-align: center;
+  font-size: 45px;
+  font-family: "rank";
   margin:0px;
   position: absolute;
   top: 0%;left: 0%;
