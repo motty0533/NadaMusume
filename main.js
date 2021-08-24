@@ -113,7 +113,7 @@ jQuery(function ($) {
       
     },
     stop: function (ev, obj) {
-      obj.$el.css("z-index", "auto");
+      obj.$el.css("z-index", "30");
       if (obj.activeDropRegions.length > 0) {
         obj.$el.css("visibility", "hidden");
         let target = obj.activeDropRegions[0].children(".box-sin");
@@ -254,13 +254,13 @@ jQuery(function ($) {
     droppable: '.vote-tri',        // dropを許可する要素
     revert: true,
     start: function (ev, obj) {
-
+      obj.$el.css("z-index", "32");
     },
     drag: function (ev, obj) {
-      obj.$el.css("z-index", "30");
+      
     },
     stop: function (ev, obj) {
-      obj.$el.css("z-index", "auto");
+      obj.$el.css("z-index", "30");
       if (obj.activeDropRegions.length > 0) {
         obj.$el.css("visibility", "hidden");
         let target = obj.activeDropRegions[0].children(".box-tri");
