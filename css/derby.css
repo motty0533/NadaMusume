@@ -44,14 +44,15 @@ html{
   width: 50%;
   text-align: center;
   /* border: solid 1px yellow; */
-  background: linear-gradient(to bottom left, #262626,#eaeaea 10%,#262626);
+  /*background:linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);*/
+  background-color: #AA0000;
   /* box-shadow: 1px 1px 8px 1px #eaeaea; */
 }
 .section-header .tabs-nav a{
   display: block;
   position: relative;
   text-decoration: none;
-  color: #000;
+  color: #E6D8B3;
   padding: 10px;
 }
 /* #border div{
@@ -70,11 +71,13 @@ html{
 }
 
 .uitab.active,.tabs-nav li .active{
-  background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
-  color:#000;
+  /*background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);*/
+  background-color: #AA0000;
+  color:#E6D8B3;
   padding-top: 15px;
   padding-bottom: 15px;
   box-shadow: -1px 1px 8px 3px #B67B03 ;
+  z-index: 1;
 }
 .section-header .tabs-nav a:active::after{
   content: "";
