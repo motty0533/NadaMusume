@@ -5,7 +5,7 @@ html{
   color: #fff;
 }
 .derby{
-  background-image: url("../img/sky.jpg");
+  background-color: #4cb5f5;
   background-size: auto;
   background-position-x: -1100px;
   background-position-y: -700px;
@@ -16,10 +16,6 @@ html{
 /* 切り替えタブ */
 .inner{
   position: relative;
-}
-.tabs-highlight{
-  position: absolute;
-  background-color: #fff;
 }
 .tabs-highlight::after{
   position: absolute;
@@ -47,13 +43,13 @@ html{
   width: 50%;
   text-align: center;
   /* border: solid 1px yellow; */
-  background-color: #f1f1f1;
+  background-color: #458678;
 }
 .section-header .tabs-nav a{
   display: block;
   position: relative;
   text-decoration: none;
-  color: #262626;
+  color: #fff;
   padding: 10px;
 }
 #border div{
@@ -61,7 +57,7 @@ html{
   width: 50%;
   bottom: 0;
   display: block;
-  background-color: yellow;
+  background-color: #B3C100;
   height: 4px;
   position: relative;
   transition: left 1s cubic-bezier(0.23,1,0.32,1);
@@ -72,8 +68,8 @@ html{
 }
 
 .uitab.active,.tabs-nav li .active{
-  background-color: #fff;
-  color:#262626;
+  background-color: #34675c;
+  color:#fff;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -283,7 +279,7 @@ h2{
 	content: '';
 	transition: 0.1s;
 	transition-delay: 0.1s;
-	background-color: yellow;
+	background-color: #34675c;
 }
 .ef ~ .focus_line:after {
 	top: auto;
@@ -301,7 +297,7 @@ h2{
 	height: 0;
 	content: '';
 	transition: 0.1s;
-	background-color :yellow;
+	background-color :#34675c;
 }
 .ef ~ .focus_line i:after {
 	top: auto;
@@ -348,7 +344,7 @@ h2{
 	top: -18px;
 	left: 0;
 	transition: 0.15s;
-	color: yellow;
+	color: #34675c;
 }
 input::-ms-clear {
   visibility:hidden
