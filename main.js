@@ -107,10 +107,10 @@ jQuery(function ($) {
     droppable: '.vote-sin',        // dropを許可する要素
     revert: true,
     start: function (ev, obj) {
-
+      obj.$el.css("z-index", "32");
     },
     drag: function (ev, obj) {
-      obj.$el.css("z-index", "31");
+      
     },
     stop: function (ev, obj) {
       obj.$el.css("z-index", "auto");
@@ -223,7 +223,7 @@ jQuery(function ($) {
           });
         }
       }
-      object.$el.css("z-index", "31");
+      object.$el.css("z-index", "32");
     },
     drag: function (event, object) {
       
@@ -370,7 +370,7 @@ jQuery(function ($) {
           });
         }
       }
-      object.$el.css("z-index", "31");
+      object.$el.css("z-index", "32");
     },
     drag: function (event, object) {
 
