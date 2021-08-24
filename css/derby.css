@@ -5,7 +5,8 @@ html{
   color: #fff;
 }
 .derby{
-  background-color: #4cb5f5;
+  /*background-color: #4cb5f5;*/
+  background-color: #000;
   background-size: auto;
   background-position-x: -1100px;
   background-position-y: -700px;
@@ -153,8 +154,8 @@ header a{
   margin-bottom:50px;
   font-family: 'Noto Serif JP',serif;
   font-weight: 600;
-  background-color: #fff;
   border-radius: 50%;
+  background-color: black;
   color: black;
 }
 .box img{
@@ -165,8 +166,20 @@ header a{
   z-index: 31;
   pointer-events: none;
 }
-.gold{
-  
+.gold .vote-box{
+  color: transparent;
+	background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+	-webkit-background-clip: text;
+}
+.silver .vote-box{
+  color: transparent;
+	background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+	-webkit-background-clip: text;
+}
+.bronze .vote-box{
+  color: transparent;
+	background: linear-gradient(45deg, #C9AE5D 0%, #C47022 45%, #C08D5E 70%, #BA6E40 85%, #B87333 90% 100%);
+	-webkit-background-clip: text;
 }
 .vote-box{
   padding: 0.2em 1em;
@@ -175,6 +188,7 @@ header a{
   top: 0%;left: 0%;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
 }
 .box-sin,.box-tri{
   margin:0px;
