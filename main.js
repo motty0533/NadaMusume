@@ -95,7 +95,10 @@ $(function(){
       $('.remaindays').text("2021年度体育祭は終了いたしました。")
     }    
     //トップページのマーカーのアニメーション
-    $('.remaindays').markerAnimation()
+    $('.remaindays').markerAnimation();
+  });
+  $(document).ready(function() {
+    $(".animsition").animsition();
   });
 
 // ドラッグアンドドロップ
