@@ -44,35 +44,37 @@ html{
   width: 50%;
   text-align: center;
   /* border: solid 1px yellow; */
-  background-color: #458678;
+  background: linear-gradient(to bottom left, #262626,#eaeaea 10%,#262626);
+  /* box-shadow: 1px 1px 8px 1px #eaeaea; */
 }
 .section-header .tabs-nav a{
   display: block;
   position: relative;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   padding: 10px;
 }
-#border div{
+/* #border div{
   left: 0%;
   width: 50%;
   bottom: 0;
   display: block;
-  background-color: #B3C100;
+  background-color: #AA0000;
   height: 4px;
   position: relative;
   transition: left 1s cubic-bezier(0.23,1,0.32,1);
-}
+} */
 .uitab.active:not(.active),.tabs-nav li  :not(.active){
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .uitab.active,.tabs-nav li .active{
-  background-color: #34675c;
-  color:#fff;
+  background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+  color:#000;
   padding-top: 15px;
   padding-bottom: 15px;
+  box-shadow: -1px 1px 8px 3px #B67B03 ;
 }
 .section-header .tabs-nav a:active::after{
   content: "";
@@ -152,8 +154,8 @@ header a{
   width: 50px;
   height: 50px;
   margin-bottom:50px;
-  font-family: 'Noto Serif JP',serif;
-  font-weight: 600;
+  font-family: 'Noto Sans JP',serif;
+  font-weight: 500;
   border-radius: 50%;
   background-color: black;
   color: black;
