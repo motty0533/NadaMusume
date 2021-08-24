@@ -1,0 +1,382 @@
+@charset "UTF-8";
+html{
+  font-size: 100%;
+  font-family: "Noto Sans JP",sans-serif;
+  color: #fff;
+}
+.derby{
+  background-image: url("../img/sky.jpg");
+  background-size: auto;
+  background-position-x: -1100px;
+  background-position-y: -700px;
+  z-index: 30;
+  margin: 0;
+  
+}
+/* 切り替えタブ */
+.inner{
+  position: relative;
+}
+.tabs-highlight{
+  position: absolute;
+  background-color: #fff;
+}
+.tabs-highlight::after{
+  position: absolute;
+}
+.section-header{
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-weight: 700;
+
+}
+.section-header .tabs-nav{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.section-header .tabs-nav li {
+  float: left;
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  /* border: solid 1px yellow; */
+  background-color: #f1f1f1;
+}
+.section-header .tabs-nav a{
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #262626;
+  padding: 10px;
+}
+#border div{
+  left: 0%;
+  width: 50%;
+  bottom: 0;
+  display: block;
+  background-color: yellow;
+  height: 4px;
+  position: relative;
+  transition: left 1s cubic-bezier(0.23,1,0.32,1);
+}
+.uitab.active:not(.active),.tabs-nav li  :not(.active){
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.uitab.active,.tabs-nav li .active{
+  background-color: #fff;
+  color:#262626;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.section-header .tabs-nav a:active::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 37px;
+  height: 19px;
+  margin-left: -18px;
+}
+/*ヘッダー*/
+header{
+  height: 7em;
+  border-bottom: solid 1px #fff;
+  text-align: center;
+  margin-bottom:0px;
+}
+header a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo{
+  width: 6em;
+  margin-top: -2em;
+  margin-bottom: -4em;
+}
+.page-title{
+  font-size: 1em;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+}
+/*全体*/
+.main{
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 4%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+/*メインコンテンツ*/
+.contents{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  margin-top: -2em;
+  
+}
+.midashi{
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
+  font-size: 30px;
+  background-image: url(../img/marker-white.png); 
+  background-size: 14rem,14rem;
+  background-position: center top;
+  z-index: 20;
+  color: rgba(0, 0, 0, 0.753);
+  padding: 2.1rem 70px;
+}
+/* 単勝 */
+.single{
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px #fff;
+  padding-bottom: 3em;
+  padding-top: auto;
+  margin-bottom: 1em;
+}
+.box{
+  position:relative;
+  margin: 2em 0;
+  border: inset 1px #fff;
+  width: 50px;
+  height: 50px;
+  margin-bottom:50px;
+  text-align: center;
+  font-family: 'Noto Serif JP',serif;
+  font-weight: 600;
+  background-color: #fff;
+  color: black;
+}
+.vote-box{
+  padding: 0.2em 1em;
+  margin:0px;
+  position: absolute;
+  top: 0%;left: 0%;
+  width: 50px;
+  height: 50px;
+}
+.box-sin,.box-tri{
+  margin:0px;
+  position: absolute;
+  top: 0%;left: 0%;
+  width: 50px;
+  height: 50px;
+  visibility: hidden;
+  z-index: 30;
+}
+.horse {
+  width: 50px;
+  height: 50px;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+.horse img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% top;
+}
+.candidate{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 三連単 */
+.triple{
+  width: 100%;
+  text-align: center;
+  padding-top: auto;
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.tribox{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+h2{
+  font-weight: 500;
+}
+/* 投票ボタン */
+.button1{
+  background-color:#fff;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  font-size: 1.625em;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+  position: fixed;
+  right:20px;
+  bottom:20px;
+  transition:1s;
+  opacity:0.9;
+  z-index: 40;
+  transition: all 0.5s;
+  opacity : 1;
+}
+.button1 span{
+  font-size: 1.3rem;
+  padding-top: 6px;
+  display: block;
+  width: auto;
+  margin: 0 auto;
+}
+.button1.hide{
+  opacity: 0;
+}
+
+/* ポイントの入力フォーム */
+.cp_iptxt {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+  text-align: left;
+}
+.cp_iptxt input[type='number'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	letter-spacing: 1px;
+	padding-left: 4em;
+}
+.cp_iptxt input[type='number']:focus {
+	outline: none;
+}
+.ef {
+	padding: 7px 14px;
+	transition: 0.4s;
+	border: 1px solid #fff;
+	background: transparent;
+}
+.ef ~ .focus_line:before,
+.ef ~ .focus_line:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	content: '';
+	transition: 0.1s;
+	transition-delay: 0.1s;
+	background-color: yellow;
+}
+.ef ~ .focus_line:after {
+	top: auto;
+	right: auto;
+	bottom: 0;
+	left: 0;
+	transition-delay: 0.3s;
+}
+.ef ~ .focus_line i:before,
+.ef ~ .focus_line i:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:2px;
+	height: 0;
+	content: '';
+	transition: 0.1s;
+	background-color :yellow;
+}
+.ef ~ .focus_line i:after {
+	top: auto;
+	right: 0;
+	bottom: 0;
+	left: auto;
+	transition-delay: 0.2s;
+}
+.ef:focus ~ .focus_line:before,
+.ef:focus ~ .focus_line:after,
+.cp_iptxt.ef ~ .focus_line:before,
+.cp_iptxt.ef ~ .focus_line:after {
+	width: 100%;
+	transition: 0.1s;
+	transition-delay: 0.3s;
+}
+.ef:focus ~ .focus_line:after,
+.cp_iptxt.ef ~ .focus_line:after {
+	transition-delay: 0.1s;
+}
+.ef:focus ~ .focus_line i:before,
+.ef:focus ~ .focus_line i:after,
+.cp_iptxt.ef ~ .focus_line i:before,
+.cp_iptxt.ef ~ .focus_line i:after {
+	height: 100%;
+	transition: 0.1s;
+}
+.ef:focus ~ .focus_line i:after,
+.cp_iptxt.ef ~ .focus_line i:after {
+	transition-delay: 0.2s;
+}
+.ef ~ label {
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	left: 14px;
+	width: 100%;
+	transition: 0.15s;
+	letter-spacing: 0.5px;
+	color: #fff;
+}
+.ef:focus ~ label, .cp_iptxt.ef ~ label {
+	font-size: px;
+	top: -18px;
+	left: 0;
+	transition: 0.15s;
+	color: yellow;
+}
+input::-ms-clear {
+  visibility:hidden
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+}
+
+input[type="number"] {
+     -moz-appearance:textfield;
+}
+input{
+  text-align: center;
+  color: #fff;
+}
+
+@media(min-width:1000px){
+  .contents{
+    flex-direction: row;
+  }
+  .single{
+    width: 50%;
+    border: none;
+    border-right: solid 1px #fff;
+  }
+  .triple{
+    width: 50%;
+  }
+}

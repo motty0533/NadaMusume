@@ -1,0 +1,40 @@
+@charset "UTF-8";
+html{
+  font-size: 100%;
+  font-family: "Noto Sans JP",sans-serif;
+  color: #000;
+}
+.main{
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 4%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+/* メインキャッチコピー */
+.maincatch{
+  height: 100vh;
+  margin:0;
+}
+.mainmidashi{
+  position: relative;
+  top: 50%;
+}
+.maintext{
+  position: relative;
+  top: 50%;
+}
+
+.logosec{
+  width: 40em;
+  height: 50em;
+  float: right;
+}
+.mainlogo{
+  position: relative;
+  width: 40em;
+  margin: 5em 0;
+  margin-top: 0em;
+}
