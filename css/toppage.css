@@ -38,7 +38,7 @@ html{
   margin-top: 0em;
   opacity: 0;
   animation-name: fadein-bottom;
-  animation-duration: 1.5s;
+  animation-duration: 2.5s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 
