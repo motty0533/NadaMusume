@@ -148,7 +148,6 @@ header a{
 .box{
   position:relative;
   margin: 2em 0;
-  border: inset 1px #fff;
   width: 50px;
   height: 50px;
   margin-bottom:50px;
@@ -156,6 +155,7 @@ header a{
   font-family: 'Noto Serif JP',serif;
   font-weight: 600;
   background-color: #fff;
+  border-radius: 50%;
   color: black;
 }
 .vote-box{
@@ -174,6 +174,7 @@ header a{
   height: 50px;
   visibility: hidden;
   z-index: 30;
+  border-radius: 50%;
 }
 .horse {
   width: 50px;
@@ -186,6 +187,7 @@ header a{
   height: 100%;
   object-fit: cover;
   object-position: 50% top;
+  border-radius: 50%;
 }
 .candidate{
   display: flex;

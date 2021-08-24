@@ -213,12 +213,23 @@ jQuery(function ($) {
     droppable: '.vote-sin',        // dropを許可する要素
     revert: true,
     start: function (event, object) {
-
+      for(let i=1; i<=num; i++){
+        let j=String(i);
+        if(object.$el.hasClass(j)){
+          object.$el.css({
+            "background-image": "url(img/horse"+j+".jpg)",
+            "background-size": "50px auto",
+            "background-position": "top left"
+          });
+        }
+      }
+      object.$el.css("z-index", "31");
     },
     drag: function (event, object) {
-
+      
     },
     stop: function (event, object) {
+      object.$el.css("z-index", "30");
       if (object.activeDropRegions.length == 0) {
         object.$el.removeClass("dropped-sin");
         object.$el.css("visibility", "hidden");
@@ -227,21 +238,12 @@ jQuery(function ($) {
           "background-image": "url()",
         });
         object.$el.addClass("-1");
-        if (object.$el.hasClass("1")) {
-          $(".1-1").css("visibility", "visible");
-          object.$el.removeClass("1");
-        }
-        if (object.$el.hasClass("2")) {
-          $(".1-2").css("visibility", "visible");
-          object.$el.removeClass("2");
-        }
-        if (object.$el.hasClass("3")) {
-          $(".1-3").css("visibility", "visible");
-          object.$el.removeClass("3");
-        }
-        if (object.$el.hasClass("4")) {
-          $(".1-4").css("visibility", "visible");
-          object.$el.removeClass("4");
+        for(let i=1; i<=num; i++){
+          let j=String(i);
+          if (object.$el.hasClass(j)) {
+            $(".1-"+j).css("visibility", "visible");
+            object.$el.removeClass(j);
+          }
         }
       }
     }
@@ -358,10 +360,20 @@ jQuery(function ($) {
     droppable: '.vote-tri',        // dropを許可する要素
     revert: true,
     start: function (event, object) {
-
+      for (let i = 1; i <= num; i++) {
+        let j = String(i);
+        if (object.$el.hasClass(j)) {
+          object.$el.css({
+            "background-image": "url(img/horse" + j + ".jpg)",
+            "background-size": "50px auto",
+            "background-position": "top left"
+          });
+        }
+      }
+      object.$el.css("z-index", "31");
     },
     drag: function (event, object) {
-      object.$el.css("z-index", "31");
+
     },
     stop: function (event, object) {
       object.$el.css("z-index", "30");
