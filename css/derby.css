@@ -53,6 +53,7 @@ html{
   /* box-shadow: 1px 1px 8px 1px #eaeaea; */
 }
 .section-header .tabs-nav a{
+  font-family: "Noto Sans JP";
   display: block;
   position: relative;
   text-decoration: none;
