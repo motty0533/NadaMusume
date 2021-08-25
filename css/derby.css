@@ -6,7 +6,7 @@ html{
 }
 @font-face {
 	font-family: 'rank';
-	src: url(../font/Korneuburg-Slab-Bold.ttf);
+	src: url(../font/UpperEastSide.ttf);
 }
 .derby{
   /*background-color: #4cb5f5;*/
@@ -165,7 +165,6 @@ header a{
   font-weight: 500;
   border-radius: 50%;
   background-color: black;
-  color: black;
 }
 .box img{
   position: absolute;
@@ -195,6 +194,7 @@ header a{
   font-size: 45px;
   font-family: "rank";
   margin:0px;
+  padding-top: 0.08em;
   position: absolute;
   top: 0%;left: 0%;
   width: 50px;
@@ -255,15 +255,15 @@ h2{
 }
 /* 投票ボタン */
 .button1{
-  background-color:#fff;
+  background-color:#AA0000;
   border-radius: 50%;
   width: 5em;
   height: 5em;
   font-size: 1.625em;
   text-align: center;
-  color: #000;
+  color: #C09933;
   font-weight: 700;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 3px 5px #AA0000;
   position: fixed;
   right:20px;
   bottom:20px;
@@ -317,7 +317,7 @@ h2{
 	content: '';
 	transition: 0.1s;
 	transition-delay: 0.1s;
-	background-color: #E6D8B3 ;
+	background-color: #C09933 ;
 }
 .ef ~ .focus_line:after {
 	top: auto;
@@ -335,7 +335,7 @@ h2{
 	height: 0;
 	content: '';
 	transition: 0.1s;
-	background-color :#E6D8B3 ;
+	background-color :#C09933 ;
 }
 .ef ~ .focus_line i:after {
 	top: auto;
@@ -382,7 +382,7 @@ h2{
 	top: -18px;
 	left: 0;
 	transition: 0.15s;
-	color: #E6D8B3 ;
+	color: #C09933 ;
 }
 input::-ms-clear {
   visibility:hidden
