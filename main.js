@@ -109,6 +109,7 @@ jQuery(function($){
     var str = window.location.href.split('/').pop();
     var nowpage = str.split('.').shift()+'s';
     console.log(nowpage);
+    $("."+nowpage).css("color","blue");
   });
 
 // ドラッグアンドドロップ
