@@ -96,17 +96,19 @@ jQuery(function($){
     }    
     //トップページのマーカーのアニメーション
     $('.remaindays').markerAnimation();
-
     // フルスクリーンナビゲーションの稼働
     $('.menu').on('click',function(){
       $('.menu__line').toggleClass('active');
-      $('.gnav').fadeToggle();
-  });
+      $('.gnav').slideToggle();
+    });
   });
 
   // animsitionの実行
   $(document).ready(function() {
     $(".animsition").animsition();
+    var str = window.location.href.split('/').pop();
+    var nowpage = str.split('.').shift()+'s';
+    console.log(nowpage);
   });
 
 // ドラッグアンドドロップ

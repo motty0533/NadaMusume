@@ -72,6 +72,7 @@
 .gnav__menu__item a:hover{
   color: #666;
 }
+
 @media(max-width:1000px){
   .gnav__menu{
     margin-left: 10%;
