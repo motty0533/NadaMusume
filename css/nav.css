@@ -55,7 +55,7 @@
   width: 100%;
 }
 .gnav__menu{
-  margin-left: 100px;
+  margin-left: 140px;
 }
 .gnav__menu__item{
   margin: 40px 0;
@@ -65,16 +65,19 @@
   color: #fff;
   font-size: 2em;
   font-weight: 600;
-  padding: 40px;
   text-decoration: none;
   transition: .5s;
+  padding: 0;
 }
 .gnav__menu__item a:hover{
   color: #666;
 }
+.derbys a{
+  /* color: #E6D8B3; */
+}
 
 @media(max-width:1000px){
   .gnav__menu{
-    margin-left: 10%;
+    margin-left: 20%;
   }
 }

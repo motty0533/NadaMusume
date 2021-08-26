@@ -118,6 +118,7 @@ header a{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  color: #E6D8B3;
 }
 /*全体*/
 .main{
@@ -266,7 +267,7 @@ h2{
   height: 5em;
   font-size: 1.625em;
   text-align: center;
-  color: #C09933;
+  color: #E6D8B3;
   font-weight: 700;
   box-shadow: 0 3px 5px #AA0000;
   position: fixed;

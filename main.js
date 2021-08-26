@@ -109,7 +109,7 @@ jQuery(function($){
     var str = window.location.href.split('/').pop();
     var nowpage = str.split('.').shift()+'s';
     console.log(nowpage);
-    $("."+nowpage).css("color","blue");
+    $("."+nowpage+">a").css("background","linear-gradient(transparent 75%, #7fbfff 75%)");
   });
 
 // ドラッグアンドドロップ
