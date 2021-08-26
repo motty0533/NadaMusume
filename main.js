@@ -1,5 +1,5 @@
 // 残りポイント表示
-$(function(){
+jQuery(function($){
   
   var single_point = 0;
   var triple_point = 0;
@@ -95,8 +95,15 @@ $(function(){
       $('.remaindays').text("2021年度体育祭は終了いたしました。")
     }    
     //トップページのマーカーのアニメーション
-    $('.remaindays').markerAnimation();
+
+    // フルスクリーンナビゲーションの稼働
+    $('.menu').on('click',function(){
+      $('.menu__line').toggleClass('active');
+      $('.gnav').fadeToggle();
   });
+  });
+
+  // animsitionの実行
   $(document).ready(function() {
     $(".animsition").animsition();
   });
