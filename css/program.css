@@ -29,6 +29,10 @@ header a{
   font-size: 1em;
   font-weight: 500;
   font-family: 'Noto Serif JP';
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .logo{
   width: 6em;

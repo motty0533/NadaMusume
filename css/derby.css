@@ -114,6 +114,10 @@ header a{
   font-size: 1em;
   font-family: 'Noto Serif JP', serif;
   font-weight: 500;
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*全体*/
 .main{
