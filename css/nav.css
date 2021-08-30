@@ -69,6 +69,9 @@
   transition: .5s;
   padding: 0;
 }
+.ruless a{
+  /* background: linear-gradient(transparent 75%, #7fbfff 75%); */
+}
 .gnav__menu__item a:hover{
   color: #666;
 }
