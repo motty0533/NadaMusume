@@ -5,11 +5,8 @@ html{
   color: #000;
 }
 .main{
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 4%;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -40,6 +37,11 @@ header a{
   margin-bottom: -4em;
 }
 /* メインコンテンツ */
+.maincontent{
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+}
 .midashi{
   font-size: 3rem;
 }
@@ -125,6 +127,9 @@ td a:hover::before {
   text-align: left;
 }
 @media(max-width:1000px){
+  .maincontent{
+    margin: 0 4%;
+  }
   .midashi{
     font-size: 2.5rem;
   }
