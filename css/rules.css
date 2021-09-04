@@ -132,9 +132,9 @@ table{
 td{
   text-align: center;
   font-size: 1.5em;
-  padding: 25px;
   font-weight: 500;
   border-bottom: solid 1px #eee;
+  padding: 0;
 }
 .last{
   border-bottom: none;
@@ -144,6 +144,7 @@ td{
   display: block;
   width: 100%;
   height: 100%;
+  padding: 25px;
 }
 
 /* 記事 */
