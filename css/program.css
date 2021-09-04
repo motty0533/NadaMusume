@@ -43,7 +43,7 @@ header a{
   margin: 0 10%;
 }
 .midashi{
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .programtable{
   text-align: center;
@@ -132,6 +132,7 @@ td a:hover::before {
   }
   .midashi{
     font-size: 2.5rem;
+    margin-left: 0;
   }
   .programtable{
     border-spacing: 20px;
