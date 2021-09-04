@@ -105,7 +105,7 @@ jQuery(function($){
     //競技説明のページ内検索
     $('#search').keyup(function(){
       var kensaku = new RegExp($('#search').val(),"i");
-      $('#result tr').each(function(){
+      $('#result tbody tr').each(function(){
         var txt = $(this).find("td:eq(0)").html();
         if(txt.match(kensaku) != null){
           $(this).show();
