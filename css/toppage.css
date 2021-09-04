@@ -43,6 +43,37 @@ html{
   animation-fill-mode: forwards;
 
 }
+
+/* コンテンツ */
+.midashi{
+  font-size: 3em;
+}
+.midashi span{
+  font-size: 5rem;
+  color: #f15a25;
+}
+.conceptmain{
+  display: flex;
+  margin: 10em 10%;
+}
+.photos{
+  margin-right: 15%;
+  width: 250px;
+}
+.name{
+  text-align: center;
+  margin-top: 1em;
+  width: 250px;
+}
+.conceptletters{
+  font-size: 20px;
+  line-height: 2;
+}
+.human{
+  border-radius: 50%;
+  width: 200px;
+  margin: 0 25px;
+}
 @keyframes fadein-bottom {
   0% {
      opacity: 0;
@@ -69,5 +100,22 @@ html{
   }
   .maintext{
     text-align: center;
+  }
+  .conceptmain{
+    flex-direction: column;
+    margin: 3em 5%;
+  }
+  .photos{
+    left: 0;
+  }
+  .name{
+    text-align: left;
+  }
+  .human{
+    margin-left: 0;
+  }
+  .conceptletters{
+    margin-top: 3em;
+    font-size: 1.2em;
   }
 }
