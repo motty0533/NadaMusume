@@ -83,7 +83,7 @@ header a{
 	width: 0;
 	height: 2px;
 	transition: 0.4s;
-	background-color: #da3c41;
+	background-color: #29B6F6;
 }
 .ef ~ .focus_line {
 	position: absolute;
@@ -92,7 +92,7 @@ header a{
 	width: 0;
 	height: 2px;
 	transition: 0.4s;
-	background-color: #da3c41;
+	background-color: #29B6F6;
 }
 .ef:focus ~ .focus_line,
 .cp_iptxt.ef ~ .focus_line {
@@ -114,7 +114,7 @@ header a{
 	font-size: 12px;
 	top: -16px;
 	transition: 0.3s;
-	color: #da3c41;
+	color: #29B6F6;
 }
 
 /* 表 */
@@ -159,7 +159,7 @@ td a::before{
   left: 0;
   z-index: -1;
   content: '';
-  background: #333;
+  background: #29B6F6;
   transform-origin: right top;
   transform: scale(0, 1);
   transition: transform .3s;
@@ -175,7 +175,7 @@ article{
 }
 .closebutton{
   display: block;
-  background-color: #e57373;
+  background-color: #29B6F6;
   color:#fff;
   text-decoration: none;
   padding: 10px 20px;
