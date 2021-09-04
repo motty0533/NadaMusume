@@ -113,14 +113,16 @@ jQuery(function($){
         }
       })
     });
+
+    //競技説明ページの切り替え
     $('.switch').on('click',function(){
-      $('.maintable').fadeOut();
+      $('.maintable').fadeOut(400);
       var idname = $(this).attr("id");
-      $('.'+idname).fadeIn();
+      $('.'+idname).fadeIn(800);
     });
     $('.closebutton').on('click',function(){
-      $('article').fadeOut();
-      $('.maintable').fadeIn();
+      $('article').fadeOut(400);
+      $('.maintable').fadeIn(800);
     });
   });
 

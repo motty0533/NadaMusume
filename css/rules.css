@@ -147,6 +147,27 @@ td{
   padding: 25px;
 }
 
+/* ホバーした際のアニメーション */
+td a:hover{
+  color: #fff;
+}
+td a::before{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  background: #333;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+td a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
 /* 記事 */
 
 article{
