@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,18 +11,23 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="vendor/animsition.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
   <script src="jquery.pep.js"></script>
   <script type="text/javascript" src="vendor/marker-animation.js"></script>
   <script src="vendor/aimsition.js"></script>
   <script src="main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
   <title>競技説明</title>
 </head>
+
 <body class="animsition">
   <a class="menu">
     <span class="menu__line menu__line--top"></span>
@@ -32,9 +38,9 @@
     <div class="gnav__wrap">
       <ul class="gnav__menu">
         <li class="gnav__menu__item toppages"><a href="toppage.html" class="animsition-link">Top</a></li>
-        <li class="gnav__menu__item programs"><a href="program.html" class="animsition-link" >Program</a></li>
-        <li class="gnav__menu__item derbys"><a href="derby.html" class="animsition-link" >Derby</a></li>
-        <li class="gnav__menu__item ruless"><a href="rules.html" class="animsition-link" >Rules</a></li>
+        <li class="gnav__menu__item programs"><a href="program.html" class="animsition-link">Program</a></li>
+        <li class="gnav__menu__item derbys"><a href="derby.html" class="animsition-link">Derby</a></li>
+        <li class="gnav__menu__item ruless"><a href="rules.html" class="animsition-link">Rules</a></li>
       </ul>
     </div>
   </nav>
@@ -44,32 +50,140 @@
       <a href="toppage.html" class="animsition-link"><img class="logo" src="img/logo-black.png" alt="logo"></a>
     </header>
     <div class="maincontent">
-  <h1 class="midashi">競技説明</h1>
-  <div class="forms">
-    <div class="cp_iptxt">
-      <input type="search" id="search" class="ef">
-      <label>検索</label>
-      <span class="focus_line"></span>
+      <h1 class="midashi">競技説明</h1>
+      <div class="maintable">
+        <div class="forms">
+          <div class="cp_iptxt">
+            <input type="search" id="search" class="ef">
+            <label>検索</label>
+            <span class="focus_line"></span>
+          </div>
+        </div>
+        <table id="result">
+          <tr>
+            <td><a class="switch" id="chi">CHIKARA</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="n1">n+1</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="run">run for pull</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="oha">おはよう🌞教師ダービー</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="yok">よくばりクォーター</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="last">ラストラン</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="oue">応援合戦</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="sen">戦略的棒奪い</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="kou">校長杯</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="bou">棒引き</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="riz">理事長杯</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="sumo">相撲</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="rire">組対抗リレー</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="tuna">綱引き</a></td>
+          </tr>
+          <tr>
+            <td><a class="switch" id="kiba">騎馬戦</a></td>
+          </tr>
+        </table>
+      </div>
+      <article class="chi">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="n1">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="run">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="oha">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="yok">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="last">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="oue">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="sen">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="kou">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="bou">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="riz">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="sumo">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="rire">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="tuna">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
+      <article class="kiba">
+        <h2>概要</h2>
+        <p>学年：全学年　人数：500人</p>
+        <a class="closebutton">閉じる</a>
+      </article>
     </div>
   </div>
-  <table id="result">
-    <tr><td>CHIKARA</td></tr>
-    <tr><td>n+1</td></tr>
-    <tr><td>run for pull</td></tr>
-    <tr><td>おはよう教師ダービー</td></tr>
-    <tr><td>よくばりクォーター</td></tr>
-    <tr><td>ラストラン</td></tr>
-    <tr><td>応援合戦</td></tr>
-    <tr><td>戦略的棒奪い</td></tr>
-    <tr><td>校長杯</td></tr>
-    <tr><td>棒引き</td></tr>
-    <tr><td>理事長杯</td></tr>
-    <tr><td>相撲</td></tr>
-    <tr><td>組対抗リレー</td></tr>
-    <tr><td>綱引き</td></tr>
-    <tr><td>騎馬戦</td></tr>
-  </table>
-  </div>
-</div>
 </body>
+
 </html>

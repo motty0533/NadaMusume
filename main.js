@@ -46,7 +46,6 @@ jQuery(function($){
       // クリックされたタブのインデックス
       // インデックスは 0 から始まるので + 1
       var selected = ui.newTab.index() + 1;
-      console.log(selected);
       if(selected==1){
         (border).animate({left:'0%'},10,'linear');
       }else if(selected==2){
@@ -114,6 +113,15 @@ jQuery(function($){
         }
       })
     });
+    $('.switch').on('click',function(){
+      $('.maintable').fadeOut();
+      var idname = $(this).attr("id");
+      $('.'+idname).fadeIn();
+    });
+    $('.closebutton').on('click',function(){
+      $('article').fadeOut();
+      $('.maintable').fadeIn();
+    });
   });
 
   // animsitionの実行
@@ -121,7 +129,6 @@ jQuery(function($){
     $(".animsition").animsition();
     var str = window.location.href.split('/').pop();
     var nowpage = str.split('.').shift()+'s';
-    console.log(nowpage);
     $("."+nowpage+">a").css("background","linear-gradient(transparent 75%, #7fbfff 75%)");
   });
 
