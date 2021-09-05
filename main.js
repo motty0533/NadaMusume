@@ -103,6 +103,7 @@ jQuery(function($){
 
     //競技説明のページ内検索
     $('#search').keyup(function(){
+      if(checkChange(this)){
       var kensaku = new RegExp($('#search').val(),"i");
       $('#result tbody tr').each(function(){
         var txt = $(this).find("td:eq(0)").html();
@@ -111,8 +112,20 @@ jQuery(function($){
         }else{
           $(this).hide();
         }
-      })
+      })}
     });
+
+    function checkChange(e){
+      var old = v=$(e).find('#search').val();
+      return function(){
+          v=$(e).find('#search').val();
+          if(old != v){
+              old = v;
+              isChange = true;
+              delSuccessMSG();
+          }
+      }
+  }
 
     //競技説明ページの切り替え
     $('.switch').on('click',function(){
