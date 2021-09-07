@@ -133,7 +133,7 @@ jQuery(function($){
     var nowpage = str.split('.').shift()+'s';
     $("."+nowpage+">a").css("background","linear-gradient(transparent 75%, #7fbfff 75%)");
   });
-
+/*
 // ドラッグアンドドロップ
 jQuery(function ($) {
   var num=4;
@@ -481,3 +481,4 @@ jQuery(function ($) {
     }
   });
 });
+*/
